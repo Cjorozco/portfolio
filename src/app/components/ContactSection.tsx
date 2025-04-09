@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 
@@ -80,7 +80,7 @@ const ContactSection: React.FC = () => {
 
                 <div className="space-y-4">
                   <div className="flex items-start">
-                    <div className="text-orange-500 mr-3">
+                    <div className="text-orange-500 mr-3 flex-shrink-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
@@ -96,13 +96,13 @@ const ContactSection: React.FC = () => {
                         />
                       </svg>
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300">
                         Email
                       </h4>
                       <a
                         href="mailto:josecarlosorozcomedina@gmail.com"
-                        className="text-gray-900 dark:text-white hover:text-orange-500 dark:hover:text-orange-500 transition-colors"
+                        className="text-gray-900 dark:text-white hover:text-orange-500 dark:hover:text-orange-500 transition-colors break-words"
                       >
                         josecarlosorozcomedina@gmail.com
                       </a>
@@ -110,7 +110,7 @@ const ContactSection: React.FC = () => {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="text-orange-500 mr-3">
+                    <div className="text-orange-500 mr-3 flex-shrink-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-6 w-6"
