@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio – Frontend Engineer (React / Next.js)
 
-## Getting Started
+Personal portfolio built with **Next.js (App Router)** to demonstrate
+frontend architecture decisions, data fetching strategies and SEO handling.
 
-First, run the development server:
+## Tech Stack
+- React 18
+- Next.js (App Router)
+- TypeScript
+- Server Components
+- Incremental Static Regeneration (ISR)
+- Vercel (deployment)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Key Technical Decisions
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. App Router & Server Components
+The project uses Next.js App Router with Server Components by default
+to reduce client-side JavaScript and improve performance.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Server-side Data Fetching
+Projects data is fetched server-side using the GitHub public API.
+ISR (`revalidate`) is used to keep data fresh without impacting performance.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 3. SEO Handling
+- Global metadata is defined at layout level
+- Page-level metadata is defined per route
+- Open Graph metadata is included for social sharing
 
-## Learn More
+### 4. What This Project Does NOT Include
+- Authentication or backend logic (out of scope for a frontend portfolio)
+- UI-heavy animations or visual effects
+- Over-engineered architecture or unnecessary abstractions
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Live Demo
+https://portfolio-jcom.vercel.app/
