@@ -11,13 +11,13 @@ const HeroSection = () => {
             José Carlos Orozco Medina
           </h1>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-300 mb-6">
-            Frontend Developer con enfoque en React.js
+            Senior Frontend Developer | 8 años de experiencia
           </h2>
 
           <p className="text-lg text-gray-300 mb-8 max-w-2xl">
-            Desarrollo interfaces modernas y soluciones web de alta calidad.
-            Especializado en crear experiencias de usuario intuitivas y
-            componentes reutilizables que aportan valor a los proyectos.
+            Especializado en interfaces web complejas, mantenibles y de alto rendimiento.
+            Dominio de React, TypeScript y arquitecturas modernas con foco en escalabilidad
+            y experiencia de usuario optimizada en el sector bancario.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -26,11 +26,7 @@ const HeroSection = () => {
                 Ver Proyectos
               </button>
             </Link>
-            <Link href="#contact" passHref>
-              <button className="px-6 py-3 bg-transparent hover:bg-gray-800 text-white font-medium rounded-md border border-gray-600 transition-all duration-300 hover:scale-105 active:scale-95">
-                Contacto
-              </button>
-            </Link>
+
           </div>
         </div>
 
