@@ -19,7 +19,7 @@ const AboutSection = () => {
       skillsTitle: "Mis principales habilidades:",
       personalTraits: "Soy un profesional metódico, con gran capacidad analítica y orientado a resultados. Busco aportar a productos web innovadores dentro de equipos de alto impacto.",
       experienceTitle: "Experiencia Profesional",
-      currentJob: "Actual",
+      currentJob: "Último",
       education: "Educación",
       jobs: [
         {
