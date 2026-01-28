@@ -5,68 +5,57 @@ interface Skill {
   level: number; // 1-5, donde 5 es el nivel más alto
   icon?: string; // Opcional: path al ícono de la habilidad
   category:
-    | "frontend"
-    | "backend"
-    | "database"
-    | "devops"
-    | "testing"
-    | "tools"
-    | "nocode"
-    | "soft"
-    | "other";
+  | "frontend"
+  | "backend"
+  | "database"
+  | "devops"
+  | "testing"
+  | "tools"
+  | "nocode"
+  | "soft"
+  | "other";
 }
 
 // Lista de habilidades técnicas personalizadas
 const skills: Skill[] = [
   // Frontend
-  { name: "HTML5", level: 4, category: "frontend" },
-  { name: "CSS3", level: 4, category: "frontend" },
-  { name: "JavaScript", level: 4, category: "frontend" },
-  { name: "TypeScript", level: 2, category: "frontend" },
-  { name: "React", level: 4, category: "frontend" },
-  { name: "Next.js", level: 3, category: "frontend" },
-  { name: "Angular", level: 1, category: "frontend" },
-  //{ name: "Vue.js", level: 1, category: "frontend" },
-  { name: "Tailwind CSS", level: 2, category: "frontend" },
-  { name: "Bootstrap", level: 2, category: "frontend" },
+  { name: "React 18", level: 5, category: "frontend" },
+  { name: "TypeScript", level: 5, category: "frontend" },
+  { name: "JavaScript (ES6+)", level: 5, category: "frontend" },
+  { name: "HTML5/CSS3", level: 5, category: "frontend" },
+  { name: "Next.js", level: 4, category: "frontend" },
+  { name: "Tailwind CSS", level: 4, category: "frontend" },
+  { name: "Material UI (MUI)", level: 5, category: "frontend" },
+  { name: "Ant Design", level: 5, category: "frontend" },
+  { name: "Radix UI", level: 4, category: "frontend" },
+  { name: "Styled Components", level: 4, category: "frontend" },
 
-  // Backend
-  { name: "Node.js", level: 1, category: "backend" },
-  { name: "Express", level: 1, category: "backend" },
-  { name: "API RESTful", level: 3, category: "backend" },
-
-  // Database
-  { name: "MySQL", level: 1, category: "database" },
-  { name: "PostgreSQL", level: 1, category: "database" },
-  { name: "MongoDB", level: 1, category: "database" },
+  // Estado y Datos
+  { name: "Redux Toolkit", level: 5, category: "other" },
+  { name: "React Hook Form", level: 5, category: "other" },
+  { name: "Zod", level: 5, category: "other" },
+  { name: "Axios", level: 5, category: "other" },
+  { name: "TanStack Table", level: 4, category: "other" },
 
   // Testing
-  { name: "Cypress.io", level: 3, category: "testing" },
-  { name: "Jest", level: 2, category: "testing" },
+  { name: "Cypress (E2E)", level: 4, category: "testing" },
+  { name: "Vitest", level: 4, category: "testing" },
+  { name: "React Testing Library", level: 4, category: "testing" },
 
-  // DevOps
-  { name: "Git", level: 4, category: "devops" },
-  { name: "GitHub", level: 3, category: "devops" },
-  { name: "CI/CD", level: 1, category: "devops" },
-  { name: "Docker", level: 1, category: "devops" },
+  // Build & Tools
+  { name: "Vite", level: 5, category: "tools" },
+  { name: "Git/GitHub", level: 5, category: "devops" },
+  { name: "Linux (Ubuntu)", level: 4, category: "tools" },
+  { name: "Webflow", level: 4, category: "nocode" },
 
-  // Tools
-  { name: "VS Code", level: 4, category: "tools" },
-  { name: "Webpack", level: 1, category: "tools" },
-  { name: "NPM/Yarn", level: 4, category: "tools" },
-  { name: "Jira", level: 3, category: "tools" },
-  { name: "Trello", level: 3, category: "tools" },
-  { name: "Figma", level: 2, category: "tools" },
-
-  // No-code Tools
-  { name: "Webflow", level: 3, category: "nocode" },
+  // IA & Productividad
+  { name: "GitHub Copilot", level: 5, category: "tools" },
+  { name: "Claude / ChatGPT", level: 5, category: "tools" },
 
   // Habilidades blandas
-  { name: "Trabajo en equipo", level: 4, category: "soft" },
-  { name: "Comunicación", level: 4, category: "soft" },
-  { name: "Resolución de problemas", level: 4, category: "soft" },
-  { name: "Gestión del tiempo", level: 4, category: "soft" },
-  { name: "Adaptabilidad", level: 4, category: "soft" },
+  { name: "Liderazgo Técnico", level: 4, category: "soft" },
+  { name: "Scrum / Agile", level: 5, category: "soft" },
+  { name: "Resolución de problemas", level: 5, category: "soft" },
 ];
 
 const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
