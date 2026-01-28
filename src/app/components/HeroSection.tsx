@@ -35,7 +35,7 @@ const HeroSection = () => {
           style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
         >
           <a
-            href="https://github.com/tuusuario"
+            href="https://github.com/cjorozco"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-orange-500 transition-colors"

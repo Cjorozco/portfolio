@@ -16,46 +16,31 @@ interface Skill {
   | "other";
 }
 
-// Lista de habilidades técnicas personalizadas
+// Core skills – Frontend Senior React (Enterprise)
 const skills: Skill[] = [
-  // Frontend
+  // Frontend core
   { name: "React 18", level: 5, category: "frontend" },
-  { name: "TypeScript", level: 5, category: "frontend" },
   { name: "JavaScript (ES6+)", level: 5, category: "frontend" },
-  { name: "HTML5/CSS3", level: 5, category: "frontend" },
-  { name: "Next.js", level: 4, category: "frontend" },
-  { name: "Tailwind CSS", level: 4, category: "frontend" },
-  { name: "Material UI (MUI)", level: 5, category: "frontend" },
-  { name: "Ant Design", level: 5, category: "frontend" },
-  { name: "Radix UI", level: 4, category: "frontend" },
-  { name: "Styled Components", level: 4, category: "frontend" },
+  { name: "TypeScript", level: 3, category: "frontend" },
+  { name: "HTML5 / CSS3", level: 5, category: "frontend" },
+  { name: "Next.js", level: 3, category: "frontend" },
 
-  // Estado y Datos
-  { name: "Redux Toolkit", level: 5, category: "other" },
-  { name: "React Hook Form", level: 5, category: "other" },
-  { name: "Zod", level: 5, category: "other" },
-  { name: "Axios", level: 5, category: "other" },
+  // State & Data
+  { name: "Redux Toolkit", level: 4, category: "other" },
+  { name: "React Hook Form", level: 4, category: "other" },
+  { name: "Axios", level: 4, category: "other" },
   { name: "TanStack Table", level: 4, category: "other" },
 
-  // Testing
+  // Testing (enterprise signal fuerte)
   { name: "Cypress (E2E)", level: 4, category: "testing" },
-  { name: "Vitest", level: 4, category: "testing" },
   { name: "React Testing Library", level: 4, category: "testing" },
 
-  // Build & Tools
-  { name: "Vite", level: 5, category: "tools" },
-  { name: "Git/GitHub", level: 5, category: "devops" },
-  { name: "Linux (Ubuntu)", level: 4, category: "tools" },
-  { name: "Webflow", level: 4, category: "nocode" },
+  // Tooling & Workflow
+  { name: "Git / GitHub", level: 4, category: "devops" },
 
-  // IA & Productividad
-  { name: "GitHub Copilot", level: 5, category: "tools" },
-  { name: "Claude / ChatGPT", level: 5, category: "tools" },
-
-  // Habilidades blandas
-  { name: "Liderazgo Técnico", level: 4, category: "soft" },
-  { name: "Scrum / Agile", level: 5, category: "soft" },
-  { name: "Resolución de problemas", level: 5, category: "soft" },
+  // AI as productivity (sin postureo)
+  { name: "GitHub Copilot", level: 3, category: "tools" },
+  { name: "Claude / ChatGPT", level: 3, category: "tools" }
 ];
 
 const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
@@ -152,13 +137,6 @@ const SkillsSection: React.FC = () => {
           {otherSkills.length > 0 && (
             <SkillCategory title="Otras" skills={otherSkills} />
           )}
-        </div>
-
-        <div>
-          <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">
-            Habilidades Blandas
-          </h2>
-          <SkillCategory title="Competencias Personales" skills={softSkills} />
         </div>
       </div>
     </section>
