@@ -26,11 +26,7 @@ const HeroSection = () => {
                 Ver Proyectos
               </button>
             </Link>
-            <Link href="#contact" passHref>
-              <button className="px-6 py-3 bg-transparent hover:bg-gray-800 text-white font-medium rounded-md border border-gray-600 transition-all duration-300 hover:scale-105 active:scale-95">
-                Contacto
-              </button>
-            </Link>
+
           </div>
         </div>
 
