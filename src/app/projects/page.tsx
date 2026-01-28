@@ -1,3 +1,12 @@
+import type { Metadata } from 'next';
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title: 'Projects',
+        description: 'Selected projects fetched server-side from GitHub using Next.js ISR'
+    };
+}
+
 // Este componente es SERVER COMPONENT por defecto
 // Se ejecuta en el servidor, no en el navegador
 
