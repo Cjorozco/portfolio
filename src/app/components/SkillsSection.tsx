@@ -7,40 +7,49 @@ interface Skill {
   category:
   | "frontend"
   | "backend"
+  | "build"
+  | "cloud"
+  | "data"
   | "database"
   | "devops"
+  | "forms"
   | "testing"
   | "tools"
   | "nocode"
   | "soft"
+  | "state"
+  | "validation"
   | "other";
 }
 
-// Core skills – Frontend Senior React (Enterprise)
+// Core skills – Frontend Senior React (Enterprise & Practical)
 const skills: Skill[] = [
   // Frontend core
   { name: "React 18", level: 5, category: "frontend" },
   { name: "JavaScript (ES6+)", level: 5, category: "frontend" },
-  { name: "TypeScript", level: 3, category: "frontend" },
   { name: "HTML5 / CSS3", level: 5, category: "frontend" },
-  { name: "Next.js", level: 3, category: "frontend" },
+  { name: "TypeScript", level: 4, category: "frontend" }, // Fuerte, uso diario en banca.
 
   // State & Data
-  { name: "Redux Toolkit", level: 4, category: "other" },
-  { name: "React Hook Form", level: 4, category: "other" },
-  { name: "Axios", level: 4, category: "other" },
-  { name: "TanStack Table", level: 4, category: "other" },
+  { name: "Redux Toolkit", level: 4, category: "state" },
+  { name: "Zustand", level: 4, category: "state" }, // Fresco por PWA
+  { name: "TanStack Table", level: 4, category: "data" }, // RESTAURADO: 2 años de uso real
+  { name: "React Hook Form", level: 4, category: "forms" },
+  { name: "Zod", level: 4, category: "validation" }, // Validación en runtime (PWA)
+  { name: "Dexie.js (IndexedDB)", level: 3, category: "data" }, // Local-first architecture
 
-  // Testing (enterprise signal fuerte)
-  { name: "Cypress (E2E)", level: 4, category: "testing" },
-  { name: "React Testing Library", level: 4, category: "testing" },
-
-  // Tooling & Workflow
+  // Tooling & Infra
+  { name: "Vite", level: 4, category: "build" }, // CORREGIDO: Nivel 4 solicitado
   { name: "Git / GitHub", level: 4, category: "devops" },
+  { name: "Next.js", level: 3, category: "frontend" }, // Nivel medio (Portfolio)
+  { name: "AWS (S3/CloudFront)", level: 2, category: "cloud" }, // Nivel "Awareness" (Nociones Claras)
 
-  // AI as productivity (sin postureo)
-  { name: "GitHub Copilot", level: 3, category: "tools" },
-  { name: "Claude / ChatGPT", level: 3, category: "tools" }
+  // Testing
+  { name: "Cypress (E2E)", level: 4, category: "testing" }, // Tu fuerte en testing
+  { name: "React Testing Library", level: 2, category: "testing" }, // Básico/Honesto
+
+  // Productivity
+  { name: "AI Assisted Coding", level: 5, category: "tools" }
 ];
 
 const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
