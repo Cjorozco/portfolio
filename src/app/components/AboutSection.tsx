@@ -11,10 +11,9 @@ const AboutSection = () => {
       title: "Sobre Mí",
       role: "Senior Frontend Developer",
       summary: [
-        "Senior Frontend Developer con 8 años de experiencia en React, especializado en interfaces web complejas, mantenibles y de alto rendimiento, con foco en performance, estado y escalabilidad.",
-        "Experto en React y TypeScript, con dominio en arquitecturas modernas usando Redux Toolkit, React Hook Form y librerías UI enterprise como Material UI y Ant Design.",
-        "Especializado en el sector bancario y fintech, desarrollando interfaces para plataformas de remesas y prepago, con foco en seguridad y manejo de datos sensibles.",
-        "Aprovecho herramientas de IA (GitHub Copilot, Claude) para optimizar código y resolver problemas complejos, manteniendo un equilibrio entre velocidad y calidad técnica."
+        "Senior Frontend Engineer con 8 años de experiencia desarrollando interfaces web complejas, escalables y orientadas al rendimiento utilizando React.",
+        "Desarrollador React-first con experiencia sólida en producción usando TypeScript, gestión moderna de estado y arquitecturas de componentes reutilizables para plataformas enterprise y bancarias.",
+        "Enfoque fuerte en arquitectura frontend, optimización de performance e interfaces con alta complejidad de interacción. Experiencia trabajando con pruebas E2E automatizadas (Cypress), integración de APIs REST y equipos Scrum en entornos de alta presión."
       ],
       skillsTitle: "Mis principales habilidades:",
       personalTraits: "Soy un profesional metódico, con gran capacidad analítica y orientado a resultados. Busco aportar a productos web innovadores dentro de equipos de alto impacto.",
@@ -27,11 +26,14 @@ const AboutSection = () => {
           company: "WEARE DEV S.A.S.",
           period: "Diciembre 2022 - Enero 2026",
           responsibilities: [
-            "Lideré el desarrollo de 4 aplicaciones web bancarias de misión crítica usando React 18, TypeScript y Vite.",
-            "Implementé estrategias de lazy loading y code-splitting que optimizaron la carga inicial de los aplicativos.",
-            "Migré proyectos legacy de CRA a Vite, reduciendo tiempos de build de 3 min a 30 seg.",
-            "Automatice el testing E2E con Cypress y unitario con Vitest, elevando la cobertura en componentes críticos.",
-            "Integré múltiples APIs RESTful con Axios, configurando interceptores y asegurando datos mediante encriptación node-jose."
+            "Lideré el desarrollo de aplicaciones web bancarias críticas usando React 18, TypeScript y Vite.",
+            "Diseñé arquitecturas frontend escalables con Redux Toolkit y formularios complejos usando React Hook Form + Zod.",
+            "Mejoré el rendimiento mediante lazy loading, code splitting y optimización de renders.",
+            "Migré proyectos legacy de Create React App a Vite, reduciendo tiempos de build de minutos a segundos.",
+            "Construí y mantuve sistemas de componentes reutilizables con Material UI, Ant Design, Radix UI y Tailwind CSS.",
+            "Integré múltiples APIs REST con manejo centralizado de errores y flujos seguros de datos.",
+            "Implementé pruebas E2E automatizadas con Cypress para validar flujos críticos de usuario y mejorar la estabilidad en producción.",
+            "Colaboré estrechamente con QA, backend y producto en equipos Scrum con entregas exigentes."
           ]
         },
         {
@@ -39,10 +41,11 @@ const AboutSection = () => {
           company: "DRAXO S.A.S.",
           period: "Octubre 2017 - Mayo 2022",
           responsibilities: [
-            "Desarrollé y mantuve una biblioteca de componentes UI reutilizables con React y Styled Components.",
-            "Implementé gestión de estado global con Redux y la integración de APIs mediante Axios.",
-            "Diagnostiqué y resolví incidencias críticas en producción optimizando el tiempo de respuesta.",
-            "Diseñé landing pages responsivas en Webflow para lanzamientos rápidos del equipo de marketing."
+            "Desarrollé y mantuve interfaces frontend usando React y Styled Components.",
+            "Enfoque en maquetación responsive, consistencia visual y reutilización de componentes.",
+            "Consumo de APIs REST y manejo de estado con Redux.",
+            "Soporte a incidencias en producción y ajustes continuos de UI.",
+            "Trabajo colaborativo con diseño y backend en múltiples proyectos de clientes."
           ]
         },
         {
@@ -72,10 +75,9 @@ const AboutSection = () => {
       title: "About Me",
       role: "Senior Frontend Developer",
       summary: [
-        "Senior Frontend Developer with 8 years of experience in React, specializing in complex, maintainable, and high-performance web interfaces with a focus on performance and scalability.",
-        "Expert in React and TypeScript, proficient in modern architectures using Redux Toolkit, React Hook Form, and enterprise UI libraries like MUI and Ant Design.",
-        "Specialized in banking and fintech sectors, delivering secure interfaces for remittance and prepaid platforms with optimized user experience.",
-        "Leveraging AI tools (GitHub Copilot, Claude) to accelerate development and solve complex architectural problems while maintaining clean code."
+        "Senior Frontend Engineer with 8 years of experience building complex, scalable, and performance-critical web interfaces using React.",
+        "React-first developer with solid production experience using TypeScript, modern state management, and reusable component architectures for enterprise and banking platforms.",
+        "Strong focus on frontend architecture, performance optimization, and interaction-heavy user interfaces. Experienced working with automated E2E testing (Cypress), REST API integration, and collaborative Scrum teams in high-pressure delivery environments."
       ],
       skillsTitle: "My core skills:",
       personalTraits: "I am a methodical, analytical, and results-oriented professional. I'm always looking to contribute to innovative web products within high-impact tech teams.",
@@ -88,11 +90,14 @@ const AboutSection = () => {
           company: "WEARE DEV S.A.S.",
           period: "December 2022 - January 2026",
           responsibilities: [
-            "Led development of 4 mission-critical banking web applications using React 18, TypeScript, and Vite.",
-            "Implemented lazy loading and code-splitting strategies to optimize initial load speed.",
-            "Migrated legacy CRA projects to Vite, reducing build times from 3 min to 30 seconds.",
-            "Automated E2E testing with Cypress and unit testing with Vitest, improving stability in production.",
-            "Integrated RESTful APIs with Axios, configuring interceptors and securing sensitive data with node-jose."
+            "Led the development of critical banking web applications using React 18, TypeScript, and Vite.",
+            "Designed scalable frontend architectures with Redux Toolkit and complex forms using React Hook Form + Zod.",
+            "Improved performance through lazy loading, code splitting, and render optimization.",
+            "Migrated legacy projects from Create React App to Vite, reducing build times from minutes to seconds.",
+            "Built and maintained reusable component systems with Material UI, Ant Design, Radix UI, and Tailwind CSS.",
+            "Integrated multiple REST APIs with centralized error handling and secure data flows.",
+            "Implemented automated E2E testing with Cypress to validate critical user flows and improve production stability.",
+            "Collaborated closely with QA, backend, and product in Scrum teams with demanding deliverables."
           ]
         },
         {
@@ -100,10 +105,11 @@ const AboutSection = () => {
           company: "DRAXO S.A.S.",
           period: "October 2017 - May 2022",
           responsibilities: [
-            "Developed and maintained a UI component library using React and Styled Components.",
-            "Implemented global state management with Redux and API integration via Axios.",
-            "Diagnosed and resolved critical production bugs using DevTools to ensure consistent uptime.",
-            "Built responsive landing pages in Webflow for rapid marketing campaign launches."
+            "Developed and maintained frontend interfaces using React and Styled Components.",
+            "Focused on responsive layouts, visual consistency, and component reusability.",
+            "Consumed REST APIs and managed state with Redux.",
+            "Provided support for production incidents and continuous UI improvements.",
+            "Collaborated with design and backend teams on multiple client projects."
           ]
         },
         {

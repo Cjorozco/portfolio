@@ -29,10 +29,15 @@ const skills: Skill[] = [
   { name: "JavaScript (ES6+)", level: 5, category: "frontend" },
   { name: "HTML5 / CSS3", level: 5, category: "frontend" },
   { name: "TypeScript", level: 4, category: "frontend" }, // Fuerte, uso diario en banca.
+  { name: "Next.js", level: 3, category: "frontend" }, // Nivel medio (Portfolio)
+  { name: "Material UI (MUI)", level: 4, category: "frontend" },
+  { name: "Ant Design", level: 4, category: "frontend" },
+  { name: "Tailwind CSS", level: 4, category: "frontend" },
 
   // State & Data
   { name: "Redux Toolkit", level: 4, category: "state" },
   { name: "Zustand", level: 4, category: "state" }, // Fresco por PWA
+  { name: "Axios (Interceptors)", level: 5, category: "data" },
   { name: "TanStack Table", level: 4, category: "data" }, // RESTAURADO: 2 años de uso real
   { name: "React Hook Form", level: 4, category: "forms" },
   { name: "Zod", level: 4, category: "validation" }, // Validación en runtime (PWA)
@@ -41,15 +46,20 @@ const skills: Skill[] = [
   // Tooling & Infra
   { name: "Vite", level: 4, category: "build" }, // CORREGIDO: Nivel 4 solicitado
   { name: "Git / GitHub", level: 4, category: "devops" },
-  { name: "Next.js", level: 3, category: "frontend" }, // Nivel medio (Portfolio)
   { name: "AWS (S3/CloudFront)", level: 2, category: "cloud" }, // Nivel "Awareness" (Nociones Claras)
 
   // Testing
   { name: "Cypress (E2E)", level: 4, category: "testing" }, // Tu fuerte en testing
+  { name: "Vitest", level: 4, category: "testing" },
   { name: "React Testing Library", level: 2, category: "testing" }, // Básico/Honesto
 
-  // Productivity
-  { name: "AI Assisted Coding", level: 5, category: "tools" }
+  // Productivity & Soft
+  { name: "AI Assisted Coding", level: 5, category: "tools" }, // Copilot / Claude
+  { name: "Scrum / Agile", level: 5, category: "soft" },
+  { name: "Liderazgo Técnico", level: 3, category: "soft" },
+
+  // NoCode
+  { name: "Webflow", level: 4, category: "nocode" }
 ];
 
 const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
@@ -101,15 +111,20 @@ const SkillCategory: React.FC<CategoryProps> = ({ title, skills }) => {
 
 const SkillsSection: React.FC = () => {
   // Agrupar habilidades por categoría
-  const frontendSkills = skills.filter(
-    (skill) => skill.category === "frontend"
+  const frontendSkills = skills.filter((skill) => skill.category === "frontend");
+
+  // Agrupamos State, Forms, Validation y Data (libraries) en "Architecture & Ecosystem"
+  const architectureSkills = skills.filter((skill) =>
+    ["state", "forms", "validation", "data"].includes(skill.category)
   );
-  const backendSkills = skills.filter((skill) => skill.category === "backend");
-  const databaseSkills = skills.filter(
-    (skill) => skill.category === "database"
-  );
+
   const testingSkills = skills.filter((skill) => skill.category === "testing");
-  const devopsSkills = skills.filter((skill) => skill.category === "devops");
+
+  // Agrupamos Build, DevOps y Cloud
+  const devopsSkills = skills.filter((skill) =>
+    ["build", "devops", "cloud"].includes(skill.category)
+  );
+
   const toolsSkills = skills.filter((skill) => skill.category === "tools");
   const nocodeSkills = skills.filter((skill) => skill.category === "nocode");
   const softSkills = skills.filter((skill) => skill.category === "soft");
@@ -124,25 +139,18 @@ const SkillsSection: React.FC = () => {
           </h2>
           <div className="w-16 h-1 mx-auto bg-orange-500 rounded-full mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Tecnologías, herramientas y competencias que he desarrollado a lo
-            largo de mi carrera profesional.
+            Stack tecnológico y herramientas que utilizo para construir productos digitales de alto impacto.
           </p>
         </div>
 
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-center text-gray-800 dark:text-white">
-            Habilidades Técnicas
-          </h2>
-          <SkillCategory title="Frontend" skills={frontendSkills} />
-          <SkillCategory title="Backend" skills={backendSkills} />
-          <SkillCategory title="Bases de Datos" skills={databaseSkills} />
-          <SkillCategory title="Testing" skills={testingSkills} />
-          <SkillCategory title="DevOps" skills={devopsSkills} />
-          <SkillCategory
-            title="Herramientas de Colaboración"
-            skills={toolsSkills}
-          />
-          <SkillCategory title="Herramientas No-Code" skills={nocodeSkills} />
+        <div className="mb-12 max-w-5xl mx-auto">
+          <SkillCategory title="Frontend Core & UI" skills={frontendSkills} />
+          <SkillCategory title="Ecosistema React & Arquitectura" skills={architectureSkills} />
+          <SkillCategory title="Testing & Calidad" skills={testingSkills} />
+          <SkillCategory title="Build, Deploy & Cloud" skills={devopsSkills} />
+          <SkillCategory title="Productividad & IA" skills={toolsSkills} />
+          <SkillCategory title="Metodologías & Soft Skills" skills={softSkills} />
+          <SkillCategory title="No-Code & Prototipado" skills={nocodeSkills} />
           {otherSkills.length > 0 && (
             <SkillCategory title="Otras" skills={otherSkills} />
           )}
