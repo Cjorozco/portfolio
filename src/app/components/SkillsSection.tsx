@@ -27,47 +27,47 @@ interface Skill {
 const skills: Skill[] = [
   // Frontend core
   { name: "React 18", level: 5, category: "frontend" },
-  { name: "JavaScript (ES6+)", level: 5, category: "frontend" },
+  { name: "JavaScript (ES6+)", level: 4, category: "frontend" },
   { name: "HTML5 / CSS3", level: 5, category: "frontend" },
-  { name: "TypeScript", level: 5, category: "frontend" }, // Senior use in Banking
+  { name: "TypeScript", level: 4, category: "frontend" },
   { name: "Next.js 15", level: 4, category: "frontend" },
 
   // Mobile Development
-  { name: "React Native", level: 3, category: "mobile" },
-  { name: "Expo", level: 3, category: "mobile" },
+  { name: "React Native", level: 2, category: "mobile" },
+  { name: "Expo", level: 2, category: "mobile" },
 
   // State & Architecture
   { name: "Redux Toolkit", level: 4, category: "state" },
-  { name: "TanStack Query v5", level: 4, category: "data" },
-  { name: "Zustand", level: 4, category: "state" },
+  { name: "TanStack Query v5", level: 3, category: "data" },
+  { name: "Zustand", level: 3, category: "state" },
   { name: "Axios (Interceptors)", level: 5, category: "data" },
   { name: "React Hook Form", level: 4, category: "forms" },
-  { name: "Zod", level: 4, category: "validation" },
-  { name: "Dexie.js (IndexedDB)", level: 3, category: "data" }, // Local-first (Budget PWA)
+  { name: "Zod", level: 3, category: "validation" },
+  { name: "Dexie.js (IndexedDB)", level: 2, category: "data" },
 
   // Backend & Databases
-  { name: "Node.js / Express", level: 3, category: "backend" },
-  { name: "FastAPI / Python", level: 3, category: "backend" },
-  { name: "Supabase / PostgreSQL", level: 3, category: "database" },
-  { name: "JWT Auth", level: 4, category: "backend" },
+  { name: "Node.js / Express", level: 2, category: "backend" },
+  { name: "FastAPI / Python", level: 2, category: "backend" },
+  { name: "Supabase / PostgreSQL", level: 2, category: "database" },
+  { name: "JWT Auth", level: 3, category: "backend" },
 
   // Tooling & Infra
-  { name: "Vite", level: 4, category: "build" },
+  { name: "Vite", level: 3, category: "build" },
   { name: "Git / GitHub", level: 4, category: "devops" },
   { name: "AWS (S3/CloudFront)", level: 2, category: "cloud" },
 
   // Testing
   { name: "Cypress (E2E)", level: 4, category: "testing" },
-  { name: "Jest / RNTL", level: 3, category: "testing" }, // Mobile testing
-  { name: "Vitest", level: 4, category: "testing" },
+  { name: "Jest / RNTL", level: 3, category: "testing" },
+  { name: "Vitest", level: 3, category: "testing" },
 
   // Productivity & Soft
-  { name: "AI Assisted Coding", level: 5, category: "tools" }, // Copilot / Claude / Heavy use
+  { name: "AI Assisted Coding", level: 4, category: "tools" },
   { name: "Scrum / Agile", level: 5, category: "soft" },
   { name: "Liderazgo Técnico", level: 3, category: "soft" },
 
   // NoCode
-  { name: "Webflow", level: 4, category: "nocode" }
+  { name: "Webflow", level: 3, category: "nocode" }
 ];
 
 const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
