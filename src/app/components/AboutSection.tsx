@@ -11,9 +11,9 @@ const AboutSection = () => {
       title: "Sobre Mí",
       role: "Senior Frontend Developer",
       summary: [
-        "Senior Frontend Engineer con 8 años de experiencia desarrollando interfaces web complejas, escalables y orientadas al rendimiento utilizando React.",
-        "Desarrollador React-first con experiencia sólida en producción usando TypeScript, gestión moderna de estado y arquitecturas de componentes reutilizables para plataformas enterprise y bancarias.",
-        "Enfoque fuerte en arquitectura frontend, optimización de performance e interfaces con alta complejidad de interacción. Experiencia trabajando con pruebas E2E automatizadas (Cypress), integración de APIs REST y equipos Scrum en entornos de alta presión."
+        "Senior Frontend Engineer y Technical Owner con 8 años de experiencia. Experto en la arquitectura de soluciones web escalables con React/TypeScript para los sectores FinTech y Banca.",
+        "Enfocado en dashboards de alto rendimiento, arquitecturas modulares y manejo eficiente de datos.",
+        "Priorizo el desarrollo pragmático asistido por IA y soluciones basadas en documentación por encima de la memorización de sintaxis para entregar funcionalidades listas para producción con mayor agilidad."
       ],
       skillsTitle: "Mis principales habilidades:",
       personalTraits: "Soy un profesional metódico, con gran capacidad analítica y orientado a resultados. Busco aportar a productos web innovadores dentro de equipos de alto impacto.",
@@ -88,9 +88,9 @@ const AboutSection = () => {
       title: "About Me",
       role: "Senior Frontend Developer",
       summary: [
-        "Senior Frontend Engineer with 8 years of experience building complex, scalable, and performance-critical web interfaces using React.",
-        "React-first developer with solid production experience using TypeScript, modern state management, and reusable component architectures for enterprise and banking platforms.",
-        "Strong focus on frontend architecture, performance optimization, and interaction-heavy user interfaces. Experienced working with automated E2E testing (Cypress), REST API integration, and collaborative Scrum teams in high-pressure delivery environments."
+        "Senior Frontend Engineer and Technical Owner with 8 years of experience. Expert in architecting scalable web solutions with React/TypeScript for the FinTech and Banking sectors.",
+        "Focused on high-performance dashboards, modular architectures, and efficient data handling.",
+        "I prioritize pragmatic AI-assisted development and documentation-based solutions over syntax memorization to deliver production-ready features with greater agility."
       ],
       skillsTitle: "My core skills:",
       personalTraits: "I am a methodical, analytical, and results-oriented professional. I'm always looking to contribute to innovative web products within high-impact tech teams.",
