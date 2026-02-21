@@ -25,27 +25,25 @@ const AboutSection = () => {
           title: "Senior Frontend Developer",
           company: "WEARE DEV S.A.S.",
           period: "Diciembre 2022 - Enero 2026",
+          location: "Envigado, Colombia",
+          projects: "Proyectos principales: Plataformas bancarias (Prepago BaaS, Grandes Exposiciones, Portal Administrativo Colte)",
           responsibilities: [
-            "Lideré el desarrollo de aplicaciones web bancarias críticas usando React 18, TypeScript y Vite.",
-            "Diseñé arquitecturas frontend escalables con Redux Toolkit y formularios complejos usando React Hook Form + Zod.",
-            "Mejoré el rendimiento mediante lazy loading, code splitting y optimización de renders.",
-            "Migré proyectos legacy de Create React App a Vite, reduciendo tiempos de build de minutos a segundos.",
-            "Construí y mantuve sistemas de componentes reutilizables con Material UI, Ant Design, Radix UI y Tailwind CSS.",
-            "Integré múltiples APIs REST con manejo centralizado de errores y flujos seguros de datos.",
-            "Implementé pruebas E2E automatizadas con Cypress para validar flujos críticos de usuario y mejorar la estabilidad en producción.",
-            "Colaboré estrechamente con QA, backend y producto en equipos Scrum con entregas exigentes."
+            "Colaboré en un equipo frontend senior para definir y estandarizar el stack tecnológico (React 18, Vite, Redux Toolkit) y los flujos de trabajo para aplicaciones bancarias críticas.",
+            "Arquitectura y Rendimiento: Diseñé arquitecturas frontend escalables enfocadas en el renderizado eficiente de grandes conjuntos de datos transaccionales.",
+            "Autonomía en UI: Implementé sistemas de componentes reutilizables con Tailwind CSS y Material UI. Gestioné mockups y layouts básicos en ausencia de diseñadores dedicados.",
+            "Modernización: Lideré la migración de Create React App a Vite, reduciendo los tiempos de compilación y mejorando la experiencia del desarrollador (DX)."
           ]
         },
         {
           title: "Frontend Developer",
           company: "DRAXO S.A.S.",
           period: "Octubre 2017 - Mayo 2022",
+          location: "Medellín, Colombia",
           responsibilities: [
-            "Desarrollé y mantuve interfaces frontend usando React y Styled Components.",
-            "Enfoque en maquetación responsive, consistencia visual y reutilización de componentes.",
-            "Consumo de APIs REST y manejo de estado con Redux.",
-            "Soporte a incidencias en producción y ajustes continuos de UI.",
-            "Trabajo colaborativo con diseño y backend en múltiples proyectos de clientes."
+            "Desarrollo de Interfaces: Desarrollé interfaces web responsivas para diversos clientes, asegurando alta fidelidad a los diseños y compatibilidad entre navegadores.",
+            "Modernización: Contribuí en la migración de proyectos legados hacia flujos de trabajo modernos en React, implementando componentes funcionales y hooks.",
+            "Manejo de Estado: Gestioné el estado de aplicaciones usando Context API y Redux, optimizando el flujo de datos.",
+            "Crecimiento Técnico: Consolidé el uso de CSS-in-JS (Styled Components) y Material UI para la creación de librerías de componentes reutilizables."
           ]
         },
         {
@@ -102,27 +100,25 @@ const AboutSection = () => {
           title: "Senior Frontend Developer",
           company: "WEARE DEV S.A.S.",
           period: "December 2022 - January 2026",
+          location: "Envigado, Colombia",
+          projects: "Main projects: Banking platforms (Prepaid BaaS, Large Exposures, Colte Admin Portal)",
           responsibilities: [
-            "Led the development of critical banking web applications using React 18, TypeScript, and Vite.",
-            "Designed scalable frontend architectures with Redux Toolkit and complex forms using React Hook Form + Zod.",
-            "Improved performance through lazy loading, code splitting, and render optimization.",
-            "Migrated legacy projects from Create React App to Vite, reducing build times from minutes to seconds.",
-            "Built and maintained reusable component systems with Material UI, Ant Design, Radix UI, and Tailwind CSS.",
-            "Integrated multiple REST APIs with centralized error handling and secure data flows.",
-            "Implemented automated E2E testing with Cypress to validate critical user flows and improve production stability.",
-            "Collaborated closely with QA, backend, and product in Scrum teams with demanding deliverables."
+            "Collaborated within a senior frontend team to define and standardize the tech stack (React 18, Vite, Redux Toolkit) and workflows for critical banking applications.",
+            "Architecture & Performance: Designed scalable frontend architectures focused on efficient rendering of large transactional datasets.",
+            "UI Autonomy: Implemented reusable component systems with Tailwind CSS and Material UI. Managed mockups and basic layouts in the absence of dedicated designers.",
+            "Modernization: Led the migration from Create React App to Vite, drastically reducing build times and improving developer experience (DX)."
           ]
         },
         {
           title: "Frontend Developer",
           company: "DRAXO S.A.S.",
           period: "October 2017 - May 2022",
+          location: "Medellín, Colombia",
           responsibilities: [
-            "Developed and maintained frontend interfaces using React and Styled Components.",
-            "Focused on responsive layouts, visual consistency, and component reusability.",
-            "Consumed REST APIs and managed state with Redux.",
-            "Provided support for production incidents and continuous UI improvements.",
-            "Collaborated with design and backend teams on multiple client projects."
+            "Interface Development: Developed responsive web interfaces for various clients, ensuring high fidelity to designs and cross-browser compatibility.",
+            "Modernization: Contributed to the migration of legacy projects to modern React workflows, implementing functional components and hooks.",
+            "State Management: Managed application state using Context API and Redux, optimizing data flow.",
+            "Technical Growth: Consolidated the use of CSS-in-JS (Styled Components) and Material UI to create reusable component libraries."
           ]
         },
         {
@@ -264,7 +260,9 @@ const AboutSection = () => {
                       </span>
                     )}
                   </div>
-                  <p className="text-gray-600 mb-2">{job.company} | {job.period}</p>
+                  <p className="text-gray-600 mb-1">{job.company} | {job.period}</p>
+                  {job.location && <p className="text-gray-500 text-sm mb-1">{job.location}</p>}
+                  {job.projects && <p className="text-orange-600 text-sm font-medium mb-2 italic">{job.projects}</p>}
                   <ul className="list-disc list-inside text-gray-700 space-y-1">
                     {job.responsibilities.map((item, i) => (
                       <li key={i}>{item}</li>
