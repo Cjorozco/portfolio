@@ -19,6 +19,7 @@ interface Skill {
   | "soft"
   | "state"
   | "validation"
+  | "mobile"
   | "other";
 }
 
@@ -28,33 +29,40 @@ const skills: Skill[] = [
   { name: "React 18", level: 5, category: "frontend" },
   { name: "JavaScript (ES6+)", level: 5, category: "frontend" },
   { name: "HTML5 / CSS3", level: 5, category: "frontend" },
-  { name: "TypeScript", level: 4, category: "frontend" }, // Fuerte, uso diario en banca.
-  { name: "Next.js", level: 3, category: "frontend" }, // Nivel medio (Portfolio)
-  { name: "Material UI (MUI)", level: 4, category: "frontend" },
-  { name: "Ant Design", level: 4, category: "frontend" },
-  { name: "Tailwind CSS", level: 4, category: "frontend" },
+  { name: "TypeScript", level: 5, category: "frontend" }, // Senior use in Banking
+  { name: "Next.js 15", level: 4, category: "frontend" },
 
-  // State & Data
+  // Mobile Development
+  { name: "React Native", level: 3, category: "mobile" },
+  { name: "Expo", level: 3, category: "mobile" },
+
+  // State & Architecture
   { name: "Redux Toolkit", level: 4, category: "state" },
-  { name: "Zustand", level: 4, category: "state" }, // Fresco por PWA
+  { name: "TanStack Query v5", level: 4, category: "data" },
+  { name: "Zustand", level: 4, category: "state" },
   { name: "Axios (Interceptors)", level: 5, category: "data" },
-  { name: "TanStack Table", level: 4, category: "data" }, // RESTAURADO: 2 años de uso real
   { name: "React Hook Form", level: 4, category: "forms" },
-  { name: "Zod", level: 4, category: "validation" }, // Validación en runtime (PWA)
-  { name: "Dexie.js (IndexedDB)", level: 3, category: "data" }, // Local-first architecture
+  { name: "Zod", level: 4, category: "validation" },
+  { name: "Dexie.js (IndexedDB)", level: 3, category: "data" }, // Local-first (Budget PWA)
+
+  // Backend & Databases
+  { name: "Node.js / Express", level: 3, category: "backend" },
+  { name: "FastAPI / Python", level: 3, category: "backend" },
+  { name: "Supabase / PostgreSQL", level: 3, category: "database" },
+  { name: "JWT Auth", level: 4, category: "backend" },
 
   // Tooling & Infra
-  { name: "Vite", level: 4, category: "build" }, // CORREGIDO: Nivel 4 solicitado
+  { name: "Vite", level: 4, category: "build" },
   { name: "Git / GitHub", level: 4, category: "devops" },
-  { name: "AWS (S3/CloudFront)", level: 2, category: "cloud" }, // Nivel "Awareness" (Nociones Claras)
+  { name: "AWS (S3/CloudFront)", level: 2, category: "cloud" },
 
   // Testing
-  { name: "Cypress (E2E)", level: 4, category: "testing" }, // Tu fuerte en testing
+  { name: "Cypress (E2E)", level: 4, category: "testing" },
+  { name: "Jest / RNTL", level: 3, category: "testing" }, // Mobile testing
   { name: "Vitest", level: 4, category: "testing" },
-  { name: "React Testing Library", level: 2, category: "testing" }, // Básico/Honesto
 
   // Productivity & Soft
-  { name: "AI Assisted Coding", level: 5, category: "tools" }, // Copilot / Claude
+  { name: "AI Assisted Coding", level: 5, category: "tools" }, // Copilot / Claude / Heavy use
   { name: "Scrum / Agile", level: 5, category: "soft" },
   { name: "Liderazgo Técnico", level: 3, category: "soft" },
 
@@ -119,6 +127,11 @@ const SkillsSection: React.FC = () => {
   );
 
   const testingSkills = skills.filter((skill) => skill.category === "testing");
+  const mobileSkills = skills.filter((skill) => skill.category === "mobile");
+
+  const backendSkills = skills.filter((skill) =>
+    ["backend", "database"].includes(skill.category)
+  );
 
   // Agrupamos Build, DevOps y Cloud
   const devopsSkills = skills.filter((skill) =>
@@ -145,6 +158,8 @@ const SkillsSection: React.FC = () => {
 
         <div className="mb-12 max-w-5xl mx-auto">
           <SkillCategory title="Frontend Core & UI" skills={frontendSkills} />
+          <SkillCategory title="Mobile Development" skills={mobileSkills} />
+          <SkillCategory title="Backend & Base de Datos" skills={backendSkills} />
           <SkillCategory title="Ecosistema React & Arquitectura" skills={architectureSkills} />
           <SkillCategory title="Testing & Calidad" skills={testingSkills} />
           <SkillCategory title="Build, Deploy & Cloud" skills={devopsSkills} />
