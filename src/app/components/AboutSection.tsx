@@ -69,6 +69,19 @@ const AboutSection = () => {
           institution: "Universidad del Norte, Barranquilla",
           year: "2011"
         }
+      ],
+      certifications: [
+        {
+          title: "Introducción a la Programación con Python",
+          institution: "Universidad Católica de Oriente (UCO)",
+          status: "Verificado",
+          link: "https://bit.ly/4alovCj"
+        },
+        {
+          title: "Inteligencia de negocios con Power BI",
+          institution: "En curso",
+          status: "En curso"
+        }
       ]
     },
     en: {
@@ -132,6 +145,19 @@ const AboutSection = () => {
           title: "Postgraduate Degree, Management Information Systems",
           institution: "Universidad del Norte, Barranquilla",
           year: "2011"
+        }
+      ],
+      certifications: [
+        {
+          title: "Introduction to Programming with Python",
+          institution: "Universidad Católica de Oriente (UCO)",
+          status: "Verified",
+          link: "https://bit.ly/4alovCj"
+        },
+        {
+          title: "Business Intelligence with Power BI",
+          institution: "In progress",
+          status: "In progress"
         }
       ]
     }
@@ -249,20 +275,50 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Educación */}
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-black mb-8 text-center">
-              {currentContent.education}
-            </h3>
+          {/* Educación y Certificaciones */}
+          <div className="mt-16 grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-2xl font-bold text-black mb-8 text-center md:text-left">
+                {currentContent.education}
+              </h3>
+              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 h-full">
+                {currentContent.degrees.map((degree, index) => (
+                  <div key={index} className={index > 0 ? "mt-4" : ""}>
+                    <h4 className="font-bold text-lg text-black mb-1">{degree.title}</h4>
+                    <p className="text-gray-600 mb-1">{degree.institution}</p>
+                    <p className="text-gray-700 text-sm">{degree.year}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-              {currentContent.degrees.map((degree, index) => (
-                <div key={index} className={index > 0 ? "mt-4" : ""}>
-                  <h4 className="font-bold text-xl text-black mb-1">{degree.title}</h4>
-                  <p className="text-gray-600 mb-1">{degree.institution}</p>
-                  <p className="text-gray-700">{degree.year}</p>
-                </div>
-              ))}
+            <div>
+              <h3 className="text-2xl font-bold text-black mb-8 text-center md:text-left">
+                {language === 'es' ? 'Certificaciones' : 'Certifications'}
+              </h3>
+              <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 h-full">
+                {/* @ts-ignore - certifications added to content */}
+                {currentContent.certifications.map((cert: any, index: number) => (
+                  <div key={index} className={index > 0 ? "mt-4" : ""}>
+                    <h4 className="font-bold text-lg text-black mb-1">{cert.title}</h4>
+                    <p className="text-gray-600 mb-1 text-sm">{cert.institution}</p>
+                    {cert.link ? (
+                      <a
+                        href={cert.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-orange-500 hover:underline text-sm font-medium"
+                      >
+                        {cert.status} →
+                      </a>
+                    ) : (
+                      <span className="text-orange-600 bg-orange-50 px-2 py-0.5 rounded text-xs font-medium border border-orange-100">
+                        {cert.status}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
