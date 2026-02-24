@@ -204,9 +204,11 @@ const AboutSection = () => {
                 </div>
                 <Image
                   src="/images/profile.jpg"
-                  alt="José Carlos Orozco"
-                  layout="fill"
-                  objectFit="cover"
+                  alt="José Carlos Orozco - Senior Frontend Developer"
+                  fill
+                  className="object-cover"
+                  sizes="256px"
+                  priority
                 />
 
               </div>
@@ -295,8 +297,7 @@ const AboutSection = () => {
                 {language === 'es' ? 'Certificaciones' : 'Certifications'}
               </h3>
               <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 h-full">
-                {/* @ts-ignore - certifications added to content */}
-                {currentContent.certifications.map((cert: any, index: number) => (
+                {currentContent.certifications.map((cert: { title: string; institution: string; status: string; link?: string }, index: number) => (
                   <div key={index} className={index > 0 ? "mt-4" : ""}>
                     <h4 className="font-bold text-lg text-black mb-1">{cert.title}</h4>
                     <p className="text-gray-600 mb-1 text-sm">{cert.institution}</p>

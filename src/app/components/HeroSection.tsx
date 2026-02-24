@@ -38,6 +38,7 @@ const HeroSection = () => {
             href="https://github.com/cjorozco"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Perfil de GitHub"
             className="text-gray-400 hover:text-orange-500 transition-colors"
           >
             <svg
@@ -57,6 +58,7 @@ const HeroSection = () => {
             href="https://www.linkedin.com/in/cjorozco"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Perfil de LinkedIn"
             className="text-gray-400 hover:text-orange-500 transition-colors"
           >
             <svg

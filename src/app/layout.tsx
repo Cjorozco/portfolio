@@ -13,20 +13,63 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://portfolio-jcom.vercel.app'),
   title: {
-    default: 'José Carlos Orozco – Frontend Engineer',
+    default: 'José Carlos Orozco – Senior Frontend Engineer',
     template: '%s | José Carlos Orozco'
   },
   description:
-    'Senior Frontend Engineer specialized in React and Next.js with enterprise experience.',
+    'Senior Frontend Engineer con 8 años de experiencia especializado en React, TypeScript y Next.js. Arquitectura de aplicaciones bancarias y FinTech de alto rendimiento.',
+  keywords: [
+    'Frontend Developer',
+    'React',
+    'TypeScript',
+    'Next.js',
+    'Senior Engineer',
+    'FinTech',
+    'Portfolio',
+    'José Carlos Orozco'
+  ],
+  authors: [{ name: 'José Carlos Orozco Medina' }],
   openGraph: {
-    title: 'José Carlos Orozco – Frontend Engineer',
+    title: 'José Carlos Orozco – Senior Frontend Engineer',
     description:
-      'Frontend Engineer with experience in enterprise and banking applications.',
+      'Senior Frontend Engineer con experiencia en aplicaciones bancarias y FinTech de alto rendimiento.',
     url: 'https://portfolio-jcom.vercel.app/',
-    siteName: 'José Carlos Portfolio',
-    type: 'website'
-  }
+    siteName: 'José Carlos Orozco – Portfolio',
+    type: 'website',
+    locale: 'es_CO',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'José Carlos Orozco – Senior Frontend Engineer',
+    description:
+      'Senior Frontend Engineer especializado en React, TypeScript y Next.js.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'José Carlos Orozco Medina',
+  jobTitle: 'Senior Frontend Engineer',
+  url: 'https://portfolio-jcom.vercel.app',
+  sameAs: [
+    'https://github.com/cjorozco',
+    'https://www.linkedin.com/in/cjorozco',
+  ],
+  knowsAbout: ['React', 'TypeScript', 'Next.js', 'Frontend Architecture', 'FinTech'],
 };
 
 export default function RootLayout({
@@ -35,7 +78,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
