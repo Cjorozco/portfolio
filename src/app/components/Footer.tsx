@@ -77,10 +77,10 @@ const Footer = () => {
               Contacto
             </h4>
             <a
-              href="mailto:cjorozco7@gmail.com"
+              href="mailto:josecarlosorozcomedina@gmail.com"
               className="text-sm hover:text-orange-500 transition-colors duration-200 block mb-4"
             >
-              cjorozco7@gmail.com
+              josecarlosorozcomedina@gmail.com
             </a>
             <div className="flex gap-4">
               {social.map((item) => (
