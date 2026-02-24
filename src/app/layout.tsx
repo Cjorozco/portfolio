@@ -57,6 +57,13 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://portfolio-jcom.vercel.app',
+    languages: {
+      'es-CO': 'https://portfolio-jcom.vercel.app',
+      'en-US': 'https://portfolio-jcom.vercel.app',
+    },
+  },
 };
 
 const jsonLd = {
