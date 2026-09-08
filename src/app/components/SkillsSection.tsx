@@ -2,72 +2,61 @@ import React from "react";
 
 interface Skill {
   name: string;
-  level: number; // 1-5, donde 5 es el nivel más alto
-  icon?: string; // Opcional: path al ícono de la habilidad
+  level: number; // 1-5
   category:
-  | "frontend"
-  | "backend"
-  | "build"
-  | "cloud"
-  | "data"
-  | "database"
-  | "devops"
-  | "forms"
-  | "testing"
-  | "tools"
-  | "nocode"
-  | "soft"
-  | "state"
-  | "validation"
-  | "mobile"
-  | "other";
+    | "frontend"
+    | "ui"
+    | "state"
+    | "testing"
+    | "api"
+    | "backend"
+    | "tools";
 }
 
-// Core skills – Frontend Senior React (Enterprise & Practical)
+// Habilidades Técnicas alineadas con el perfil Senior Frontend
 const skills: Skill[] = [
-  // Frontend core
-  { name: "React 18", level: 5, category: "frontend" },
-  { name: "JavaScript (ES6+)", level: 4, category: "frontend" },
-  { name: "HTML5 / CSS3", level: 5, category: "frontend" },
+  // Frontend Core
+  { name: "React 18 / 19", level: 5, category: "frontend" },
+  { name: "Next.js 15 / 16 (App Router)", level: 4, category: "frontend" },
   { name: "TypeScript", level: 4, category: "frontend" },
-  { name: "Next.js 15", level: 4, category: "frontend" },
+  { name: "JavaScript (ES6+)", level: 5, category: "frontend" },
+  { name: "Vite", level: 4, category: "frontend" },
+  { name: "HTML5 / CSS3 Semántico", level: 5, category: "frontend" },
 
-  // Mobile Development
-  { name: "React Native", level: 2, category: "mobile" },
-  { name: "Expo", level: 2, category: "mobile" },
+  // UI & Estilos
+  { name: "Tailwind CSS", level: 5, category: "ui" },
+  { name: "Material UI (MUI)", level: 4, category: "ui" },
+  { name: "Styled Components", level: 4, category: "ui" },
+  { name: "Design Systems & Tokens", level: 4, category: "ui" },
 
-  // State & Architecture
+  // Estado y Formularios
   { name: "Redux Toolkit", level: 4, category: "state" },
-  { name: "TanStack Query v5", level: 3, category: "data" },
-  { name: "Zustand", level: 3, category: "state" },
-  { name: "Axios (Interceptors)", level: 5, category: "data" },
-  { name: "React Hook Form", level: 4, category: "forms" },
-  { name: "Zod", level: 3, category: "validation" },
-  { name: "Dexie.js (IndexedDB)", level: 2, category: "data" },
+  { name: "Context API", level: 4, category: "state" },
+  { name: "React Hook Form", level: 4, category: "state" },
+  { name: "Zod (Validación de Esquemas)", level: 4, category: "state" },
+  { name: "TanStack Query", level: 3, category: "state" },
 
-  // Backend & Databases
-  { name: "Node.js / Express", level: 2, category: "backend" },
-  { name: "FastAPI / Python", level: 2, category: "backend" },
-  { name: "Supabase / PostgreSQL", level: 2, category: "database" },
-  { name: "JWT Auth", level: 3, category: "backend" },
+  // Testing & Calidad
+  { name: "Cypress (E2E Testing)", level: 4, category: "testing" },
+  { name: "Jest", level: 3, category: "testing" },
+  { name: "React Testing Library", level: 3, category: "testing" },
 
-  // Tooling & Infra
-  { name: "Vite", level: 3, category: "build" },
-  { name: "Git / GitHub", level: 4, category: "devops" },
-  { name: "AWS (S3/CloudFront)", level: 2, category: "cloud" },
+  // Integración & APIs
+  { name: "REST APIs (Consumo & Manejo de Errores)", level: 5, category: "api" },
+  { name: "Autenticación (JWT / OAuth)", level: 4, category: "api" },
+  { name: "Manejo de Datos Transaccionales", level: 4, category: "api" },
 
-  // Testing
-  { name: "Cypress (E2E)", level: 4, category: "testing" },
-  { name: "Jest / RNTL", level: 3, category: "testing" },
-  { name: "Vitest", level: 3, category: "testing" },
+  // Herramientas & IA
+  { name: "Cursor (AI-assisted Workflow)", level: 4, category: "tools" },
+  { name: "Claude Code / LLMs", level: 4, category: "tools" },
+  { name: "Git / GitHub", level: 4, category: "tools" },
+  { name: "Make.com (Automatización)", level: 3, category: "tools" },
 
-  // Productivity & Soft
-  { name: "AI Assisted Coding", level: 4, category: "tools" },
-  { name: "Scrum / Agile", level: 5, category: "soft" },
-  { name: "Liderazgo Técnico", level: 3, category: "soft" },
-
-  // NoCode
-  { name: "Webflow", level: 3, category: "nocode" }
+  // Backend & Cloud (Nociones)
+  { name: "Node.js", level: 2, category: "backend" },
+  { name: "Python (FastAPI)", level: 2, category: "backend" },
+  { name: "Supabase", level: 2, category: "backend" },
+  { name: "AWS (S3 / CloudFront)", level: 2, category: "backend" }
 ];
 
 const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
@@ -77,9 +66,9 @@ const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
         <span className="text-sm font-medium text-gray-800 dark:text-gray-200">
           {skill.name}
         </span>
-        <span className="text-xs text-gray-600 dark:text-gray-400">
+        <span className="text-xs text-gray-600 dark:text-gray-400 font-medium">
           {skill.level === 1 && "Básico"}
-          {skill.level === 2 && "Elemental"}
+          {skill.level === 2 && "Nociones / Foundational"}
           {skill.level === 3 && "Intermedio"}
           {skill.level === 4 && "Avanzado"}
           {skill.level === 5 && "Experto"}
@@ -87,7 +76,7 @@ const SkillBar: React.FC<{ skill: Skill }> = ({ skill }) => {
       </div>
       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
         <div
-          className="bg-orange-500 h-2 rounded-full"
+          className="bg-orange-500 h-2 rounded-full transition-all duration-500"
           style={{ width: `${skill.level * 20}%` }}
         ></div>
       </div>
@@ -105,7 +94,7 @@ const SkillCategory: React.FC<CategoryProps> = ({ title, skills }) => {
 
   return (
     <div className="mb-8">
-      <h3 className="text-xl font-semibold mb-4 text-gray-800 dark:text-white">
+      <h3 className="text-lg font-bold mb-4 text-gray-900 dark:text-white border-l-4 border-orange-500 pl-3">
         {title}
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6">
@@ -118,57 +107,35 @@ const SkillCategory: React.FC<CategoryProps> = ({ title, skills }) => {
 };
 
 const SkillsSection: React.FC = () => {
-  // Agrupar habilidades por categoría
-  const frontendSkills = skills.filter((skill) => skill.category === "frontend");
-
-  // Agrupamos State, Forms, Validation y Data (libraries) en "Architecture & Ecosystem"
-  const architectureSkills = skills.filter((skill) =>
-    ["state", "forms", "validation", "data"].includes(skill.category)
-  );
-
-  const testingSkills = skills.filter((skill) => skill.category === "testing");
-  const mobileSkills = skills.filter((skill) => skill.category === "mobile");
-
-  const backendSkills = skills.filter((skill) =>
-    ["backend", "database"].includes(skill.category)
-  );
-
-  // Agrupamos Build, DevOps y Cloud
-  const devopsSkills = skills.filter((skill) =>
-    ["build", "devops", "cloud"].includes(skill.category)
-  );
-
-  const toolsSkills = skills.filter((skill) => skill.category === "tools");
-  const nocodeSkills = skills.filter((skill) => skill.category === "nocode");
-  const softSkills = skills.filter((skill) => skill.category === "soft");
-  const otherSkills = skills.filter((skill) => skill.category === "other");
+  const frontendSkills = skills.filter((s) => s.category === "frontend");
+  const uiSkills = skills.filter((s) => s.category === "ui");
+  const stateSkills = skills.filter((s) => s.category === "state");
+  const testingSkills = skills.filter((s) => s.category === "testing");
+  const apiSkills = skills.filter((s) => s.category === "api");
+  const toolsSkills = skills.filter((s) => s.category === "tools");
+  const backendSkills = skills.filter((s) => s.category === "backend");
 
   return (
     <section id="skills" className="py-20 bg-white dark:bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="mb-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-            Habilidades y Competencias
+            Habilidades Técnicas
           </h2>
           <div className="w-16 h-1 mx-auto bg-orange-500 rounded-full mb-6"></div>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Stack tecnológico y herramientas que utilizo para construir productos digitales de alto impacto.
+            Competencias de ingeniería frontend, herramientas de aceleración con IA y tecnologías complementarias para desarrollo web de alto rendimiento.
           </p>
         </div>
 
-        <div className="mb-12 max-w-5xl mx-auto">
-          <SkillCategory title="Frontend Core & UI" skills={frontendSkills} />
-          <SkillCategory title="Mobile Development" skills={mobileSkills} />
-          <SkillCategory title="Backend & Base de Datos" skills={backendSkills} />
-          <SkillCategory title="Ecosistema React & Arquitectura" skills={architectureSkills} />
+        <div className="mb-12 max-w-5xl mx-auto space-y-2">
+          <SkillCategory title="Frontend Core" skills={frontendSkills} />
+          <SkillCategory title="UI & Estilos" skills={uiSkills} />
+          <SkillCategory title="Estado & Formularios" skills={stateSkills} />
           <SkillCategory title="Testing & Calidad" skills={testingSkills} />
-          <SkillCategory title="Build, Deploy & Cloud" skills={devopsSkills} />
-          <SkillCategory title="Productividad & IA" skills={toolsSkills} />
-          <SkillCategory title="Metodologías & Soft Skills" skills={softSkills} />
-          <SkillCategory title="No-Code & Prototipado" skills={nocodeSkills} />
-          {otherSkills.length > 0 && (
-            <SkillCategory title="Otras" skills={otherSkills} />
-          )}
+          <SkillCategory title="Integración & APIs" skills={apiSkills} />
+          <SkillCategory title="Herramientas & Asistencia con IA" skills={toolsSkills} />
+          <SkillCategory title="Backend & Cloud (Nociones)" skills={backendSkills} />
         </div>
       </div>
     </section>

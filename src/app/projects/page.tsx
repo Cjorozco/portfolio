@@ -34,8 +34,13 @@ async function getRepos(): Promise<Repo[]> {
 
     const allRepos: Repo[] = await res.json();
 
-    // Priorizamos los repositorios solicitados por el usuario
-    const priorityRepos = ['portfolio', 'node-api-for-frontend', 'react-shop'];
+    // Priorizamos los repositorios destacados de la hoja de vida
+    const priorityRepos = [
+        'next15-fastapi-supabase-template',
+        'portfolio',
+        'budget-pwa',
+        'personal-buget-pwa'
+    ];
 
     return allRepos.sort((a, b) => {
         const aPriority = priorityRepos.indexOf(a.name);

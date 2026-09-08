@@ -28,8 +28,13 @@ async function getRepos(): Promise<Project[]> {
 
     const repos = await res.json();
 
-    // Priorizamos los repositorios solicitados: portfolio, node-api-for-frontend y react-shop
-    const priorityRepos = ['portfolio', 'node-api-for-frontend', 'react-shop'];
+    // Priorizamos los proyectos destacados en la hoja de vida
+    const priorityRepos = [
+      'next15-fastapi-supabase-template',
+      'portfolio',
+      'budget-pwa',
+      'personal-buget-pwa'
+    ];
 
     return repos
       .filter((repo: any) => !repo.fork)
@@ -110,6 +115,35 @@ const ProjectsSection = async ({ id }: { id: string }) => {
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Explora mis repositorios más recientes obtenidos directamente de GitHub.
           </p>
+        </div>
+
+        {/* Banner de Proyecto Empresarial Privado */}
+        <div className="mb-12 max-w-4xl mx-auto p-5 rounded-xl bg-white dark:bg-gray-800 border border-orange-500/30 shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <div className="flex flex-wrap items-center gap-2 mb-1.5">
+              <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/60 px-2.5 py-0.5 rounded-full border border-orange-200 dark:border-orange-800">
+                Plataforma Empresarial Destacada
+              </span>
+              <span className="text-xs font-mono text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded">
+                🔒 Repositorio Privado
+              </span>
+              <span className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
+                ● En desarrollo activo
+              </span>
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+              Ecosistemas Platform — Gestión Operativa &amp; Panel Administrativo
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 max-w-2xl leading-relaxed">
+              Arquitectura end-to-end con Next.js, React y TypeScript para gestión de clientes, rutas y recolecciones en producción. Actualmente desarrollando un nuevo módulo operativo cotizado para la plataforma empresarial.
+            </p>
+          </div>
+          <a
+            href="#about"
+            className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-orange-500 hover:bg-orange-600 rounded-md transition-all duration-300 shadow hover:scale-105 active:scale-95"
+          >
+            Ver en Experiencia →
+          </a>
         </div>
 
         {projects.length > 0 ? (

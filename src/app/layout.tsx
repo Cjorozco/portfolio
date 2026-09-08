@@ -15,26 +15,30 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio-jcom.vercel.app'),
   title: {
-    default: 'José Carlos Orozco – Senior Frontend Engineer',
+    default: 'José Carlos Orozco – Ingeniero Frontend Senior | React & TypeScript Specialist',
     template: '%s | José Carlos Orozco'
   },
   description:
-    'Senior Frontend Engineer con 8 años de experiencia especializado en React, TypeScript y Next.js. Arquitectura de aplicaciones bancarias y FinTech de alto rendimiento.',
+    'Ingeniero Frontend Senior con más de 8 años de experiencia en React, TypeScript y Next.js. Especializado en Fintech, Banca, plataformas operativas y desarrollo asistido por IA.',
   keywords: [
-    'Frontend Developer',
-    'React',
-    'TypeScript',
+    'Ingeniero Frontend Senior',
+    'Senior Frontend Engineer',
+    'React Specialist',
+    'TypeScript Specialist',
     'Next.js',
-    'Senior Engineer',
     'FinTech',
+    'Banca',
+    'Cypress',
+    'Cursor',
+    'Claude Code',
     'Portfolio',
     'José Carlos Orozco'
   ],
   authors: [{ name: 'José Carlos Orozco Medina' }],
   openGraph: {
-    title: 'José Carlos Orozco – Senior Frontend Engineer',
+    title: 'José Carlos Orozco – Ingeniero Frontend Senior | React & TypeScript Specialist',
     description:
-      'Senior Frontend Engineer con experiencia en aplicaciones bancarias y FinTech de alto rendimiento.',
+      'Ingeniero Frontend Senior con más de 8 años de experiencia en React, TypeScript y Next.js. Especializado en Fintech, Banca y desarrollo asistido por IA.',
     url: 'https://portfolio-jcom.vercel.app/',
     siteName: 'José Carlos Orozco – Portfolio',
     type: 'website',
@@ -42,9 +46,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'José Carlos Orozco – Senior Frontend Engineer',
+    title: 'José Carlos Orozco – Ingeniero Frontend Senior | React & TypeScript Specialist',
     description:
-      'Senior Frontend Engineer especializado en React, TypeScript y Next.js.',
+      'Ingeniero Frontend Senior especializado en React, TypeScript, Next.js y desarrollo asistido por IA.',
   },
   robots: {
     index: true,
@@ -70,13 +74,24 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'José Carlos Orozco Medina',
-  jobTitle: 'Senior Frontend Engineer',
+  jobTitle: 'Ingeniero Frontend Senior | React & TypeScript Specialist',
   url: 'https://portfolio-jcom.vercel.app',
   sameAs: [
     'https://github.com/cjorozco',
     'https://www.linkedin.com/in/cjorozco',
+    'https://www.instagram.com/orzix.tech/',
+    'https://www.tiktok.com/@orzix.tech',
   ],
-  knowsAbout: ['React', 'TypeScript', 'Next.js', 'Frontend Architecture', 'FinTech'],
+  knowsAbout: [
+    'React',
+    'TypeScript',
+    'Next.js',
+    'Frontend Architecture',
+    'FinTech',
+    'Banking Platforms',
+    'Cypress E2E',
+    'AI-Assisted Development (Cursor, Claude Code)'
+  ],
 };
 
 export default function RootLayout({
