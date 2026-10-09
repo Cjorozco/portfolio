@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 interface Job {
@@ -53,6 +53,11 @@ interface ContentSection {
 
 const AboutSection = () => {
   const [language, setLanguage] = useState<'es' | 'en'>('es');
+
+  // Share the selected language with server-rendered sections (see .i18n-* in globals.css).
+  useEffect(() => {
+    document.documentElement.dataset.lang = language;
+  }, [language]);
 
   const content: { es: ContentSection; en: ContentSection } = {
     es: {

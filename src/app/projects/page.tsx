@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { PROJECTS_CONFIG } from '../projects.config';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
@@ -34,23 +35,11 @@ async function getRepos(): Promise<Repo[]> {
 
     const allRepos: Repo[] = await res.json();
 
-    // Priorizamos los repositorios destacados de la hoja de vida
-    const priorityRepos = [
-        'next15-fastapi-supabase-template',
-        'portfolio',
-        'budget-pwa',
-        'personal-buget-pwa'
-    ];
+    const orderOf = (name: string) => PROJECTS_CONFIG[name]?.order ?? Number.MAX_SAFE_INTEGER;
 
-    return allRepos.sort((a, b) => {
-        const aPriority = priorityRepos.indexOf(a.name);
-        const bPriority = priorityRepos.indexOf(b.name);
-
-        if (aPriority !== -1 && bPriority !== -1) return aPriority - bPriority;
-        if (aPriority !== -1) return -1;
-        if (bPriority !== -1) return 1;
-        return 0;
-    });
+    return allRepos
+        .filter(repo => !PROJECTS_CONFIG[repo.name]?.hidden)
+        .sort((a, b) => orderOf(a.name) - orderOf(b.name));
 }
 
 export default async function ProjectsPage() {
