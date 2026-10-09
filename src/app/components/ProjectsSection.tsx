@@ -184,27 +184,27 @@ const ProjectsSection = async ({ id }: { id: string }) => {
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-1.5">
               <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/60 px-2.5 py-0.5 rounded-full border border-orange-200 dark:border-orange-800">
-                Plataforma Empresarial Destacada
+                <T text={{ es: "Plataforma Empresarial Destacada", en: "Featured Enterprise Platform" }} />
               </span>
               <span className="text-xs font-mono text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded">
-                🔒 Repositorio Privado
+                <T text={{ es: "🔒 Repositorio Privado", en: "🔒 Private Repository" }} />
               </span>
               <span className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
-                ● En desarrollo activo
+                <T text={{ es: "● En desarrollo activo", en: "● Under active development" }} />
               </span>
             </div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              Ecosistemas Platform — Gestión Operativa &amp; Panel Administrativo
+              <T text={{ es: "Ecosistemas Platform — Gestión Operativa & Panel Administrativo", en: "Ecosistemas Platform — Operations Management & Admin Panel" }} />
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 max-w-2xl leading-relaxed">
-              Arquitectura end-to-end con Next.js, React y TypeScript para gestión de clientes, rutas y recolecciones en producción. Actualmente desarrollando un nuevo módulo operativo cotizado para la plataforma empresarial.
+              <T text={{ es: "Arquitectura end-to-end con Next.js, React y TypeScript para gestión de clientes, rutas y recolecciones en producción. Actualmente desarrollando un nuevo módulo operativo cotizado para la plataforma empresarial.", en: "End-to-end architecture with Next.js, React and TypeScript for managing customers, routes and collections in production. Currently building a new, quoted operations module for the enterprise platform." }} />
             </p>
           </div>
           <a
             href="#about"
             className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-orange-500 hover:bg-orange-600 rounded-md transition-all duration-300 shadow hover:scale-105 active:scale-95"
           >
-            Ver en Experiencia →
+            <T text={{ es: "Ver en Experiencia →", en: "View in Experience →" }} />
           </a>
         </div>
 
