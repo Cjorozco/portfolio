@@ -20,26 +20,32 @@ type Repo = {
 };
 
 async function getRepos(): Promise<Repo[]> {
-    // fetch en Next.js soporta caching y revalidación
-    const res = await fetch(
-        'https://api.github.com/users/Cjorozco/repos',
-        {
-            // Revalida cada 1 hora
-            next: { revalidate: 3600 }
+    try {
+        // fetch en Next.js soporta caching y revalidación
+        const res = await fetch(
+            'https://api.github.com/users/Cjorozco/repos',
+            {
+                // Revalida cada 1 hora
+                next: { revalidate: 3600 }
+            }
+        );
+
+        if (!res.ok) {
+            console.error('Failed to fetch repos');
+            return [];
         }
-    );
 
-    if (!res.ok) {
-        throw new Error('Failed to fetch repos');
+        const allRepos: Repo[] = await res.json();
+
+        const orderOf = (name: string) => PROJECTS_CONFIG[name]?.order ?? Number.MAX_SAFE_INTEGER;
+
+        return allRepos
+            .filter(repo => !PROJECTS_CONFIG[repo.name]?.hidden)
+            .sort((a, b) => orderOf(a.name) - orderOf(b.name));
+    } catch (error) {
+        console.error('Error fetching GitHub repos:', error);
+        return [];
     }
-
-    const allRepos: Repo[] = await res.json();
-
-    const orderOf = (name: string) => PROJECTS_CONFIG[name]?.order ?? Number.MAX_SAFE_INTEGER;
-
-    return allRepos
-        .filter(repo => !PROJECTS_CONFIG[repo.name]?.hidden)
-        .sort((a, b) => orderOf(a.name) - orderOf(b.name));
 }
 
 export default async function ProjectsPage() {
@@ -50,6 +56,12 @@ export default async function ProjectsPage() {
             <h1 className="text-4xl font-bold mb-8 text-black dark:text-white border-b-2 border-orange-500 pb-2 inline-block">
                 Projects
             </h1>
+
+            {repos.length === 0 && (
+                <p className="text-gray-600 dark:text-gray-300">
+                    No se han podido cargar los proyectos en este momento.
+                </p>
+            )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {repos.map(repo => (
