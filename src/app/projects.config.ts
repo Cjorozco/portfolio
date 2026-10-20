@@ -44,7 +44,7 @@ export const PROJECTS_CONFIG: Record<string, ProjectConfig> = {
       en: 'Offline-first personal finance PWA built with React 19 and TypeScript. Expense categorization with local rules plus an optional LLM, budgets, bank reconciliation and 289 automated tests.',
     },
     stack: ['React 19', 'TypeScript', 'Vite', 'Dexie (IndexedDB)', 'Zustand', 'Zod', 'Tailwind CSS', 'Vitest'],
-    demoUrl: 'https://personal-buget-pwa.vercel.app/',
+    demoUrl: 'https://www.myrealbalance.app/',
     note: { es: 'Interfaz en español', en: 'UI in Spanish' },
   },
   portfolio: {
