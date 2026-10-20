@@ -90,7 +90,7 @@ async function getProjects(): Promise<Project[]> {
     .map(([name, config]) => toProject(name, config, reposByName.get(name)));
 
   const others = repos
-    .filter((repo) => !repo.fork && !pinnedNames.has(repo.name) && !PROJECTS_CONFIG[repo.name]?.hidden)
+    .filter((repo) => !repo.fork && !pinnedNames.has(repo.name) && !PROJECTS_CONFIG[repo.name]?.hidden && Boolean(repo.description?.trim()))
     .sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime())
     .map((repo) => toProject(repo.name, PROJECTS_CONFIG[repo.name] ?? {}, repo));
 

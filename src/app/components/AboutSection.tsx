@@ -64,7 +64,7 @@ const AboutSection = () => {
       title: "Sobre Mí",
       role: "Ingeniero Frontend Senior | React & TypeScript Specialist",
       summary: [
-        "Ingeniero Frontend Senior con más de 8 años de experiencia construyendo aplicaciones web escalables y de alto rendimiento en React y TypeScript, especializado en sectores críticos como Fintech y Banca.",
+        "Ingeniero Frontend Senior con más de 8 años de experiencia construyendo aplicaciones web escalables y de alto rendimiento en React y JavaScript (TypeScript desde 2022), especializado en sectores críticos como Fintech y Banca.",
         "Experto en arquitectura modular, consumo e integración de APIs REST complejas, manejo de estado global y optimización de interfaces con alto volumen de datos.",
         "Dominio avanzado de desarrollo asistido por IA (Cursor, Claude Code, LLMs) para acelerar tiempos de entrega, refactorización y calidad de código en producción."
       ],
@@ -162,7 +162,7 @@ const AboutSection = () => {
       title: "About Me",
       role: "Senior Frontend Engineer | React & TypeScript Specialist",
       summary: [
-        "Senior Frontend Engineer with 8+ years of experience building scalable, high-performance web applications using React and TypeScript, specializing in Fintech and Banking sectors.",
+        "Senior Frontend Engineer with 8+ years of experience building scalable, high-performance web applications using React and JavaScript (TypeScript since 2022), specializing in Fintech and Banking sectors.",
         "Proven track record in designing modular frontend architectures, integrating complex REST APIs, and optimizing data-intensive user interfaces.",
         "Advanced practitioner of AI-assisted development (Cursor, Claude Code, LLMs) to streamline workflows, accelerate delivery, and maintain production-grade code quality."
       ],

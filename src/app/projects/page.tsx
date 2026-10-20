@@ -41,6 +41,8 @@ async function getRepos(): Promise<Repo[]> {
 
         return allRepos
             .filter(repo => !PROJECTS_CONFIG[repo.name]?.hidden)
+            // Undescribed repos only show when pinned in the config.
+            .filter(repo => Boolean(repo.description?.trim()) || PROJECTS_CONFIG[repo.name]?.order !== undefined)
             .sort((a, b) => orderOf(a.name) - orderOf(b.name));
     } catch (error) {
         console.error('Error fetching GitHub repos:', error);

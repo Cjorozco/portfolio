@@ -15,7 +15,7 @@ const HeroSection = () => {
           </h2>
 
           <p className="text-lg text-gray-300 mb-8 max-w-2xl leading-relaxed">
-            Más de 8 años construyendo aplicaciones web escalables y de alto rendimiento en React y TypeScript, especializado en sectores como Fintech, Banca y plataformas de gestión operativa. Dominio avanzado de desarrollo asistido por IA (Cursor, Claude Code, LLMs) para acelerar entregas con calidad de producción.
+            Más de 8 años construyendo aplicaciones web escalables y de alto rendimiento en React y JavaScript (TypeScript desde 2022), especializado en sectores como Fintech, Banca y plataformas de gestión operativa. Dominio avanzado de desarrollo asistido por IA (Cursor, Claude Code, LLMs) para acelerar entregas con calidad de producción.
           </p>
 
           <div className="flex flex-wrap gap-4">

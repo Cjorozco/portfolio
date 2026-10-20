@@ -22,16 +22,17 @@ export const GITHUB_USER = 'Cjorozco';
 
 // Keys are GitHub repo names.
 export const PROJECTS_CONFIG: Record<string, ProjectConfig> = {
-  // "project-manager-web" lives in this repo; its homepage is the live demo.
+  // Real repo name is legacy (pre-Convex FastAPI template); the app is Next.js 16 + Convex + Supabase Auth.
+  // Its GitHub homepage is the live demo.
   'next15-fastapi-supabase-template': {
     order: 1,
     featured: true,
     title: 'Project Manager',
     description: {
-      es: 'Aplicación SaaS full-stack de gestión de proyectos con Next.js 15, Convex y Supabase Auth. CRUD de proyectos, tareas con reordenamiento drag-and-drop, progreso en tiempo real y pruebas con Vitest y Cypress. Demo disponible sin registro.',
-      en: 'Full-stack project management SaaS built with Next.js 15, Convex and Supabase Auth. Project CRUD, tasks with drag-and-drop reordering, real-time progress tracking and Vitest/Cypress tests. Demo available without signing up.',
+      es: 'Aplicación SaaS full-stack de gestión de proyectos con Next.js 16, Convex y Supabase Auth. CRUD de proyectos, tareas con reordenamiento drag-and-drop, progreso en tiempo real y pruebas con Vitest y Cypress. Demo disponible sin registro.',
+      en: 'Full-stack project management SaaS built with Next.js 16, Convex and Supabase Auth. Project CRUD, tasks with drag-and-drop reordering, real-time progress tracking and Vitest/Cypress tests. Demo available without signing up.',
     },
-    stack: ['Next.js 15', 'TypeScript', 'Convex', 'Supabase Auth', 'Tailwind CSS', 'shadcn/ui', 'dnd-kit', 'Vitest', 'Cypress'],
+    stack: ['Next.js 16', 'TypeScript', 'Convex', 'Supabase Auth', 'Tailwind CSS', 'shadcn/ui', 'dnd-kit', 'Vitest', 'Cypress'],
     demoUrl: 'https://project-manager-web-five.vercel.app/',
     note: { es: 'Interfaz en español', en: 'UI in Spanish' },
   },
