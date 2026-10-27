@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'José Carlos Orozco – Ingeniero Frontend Senior | React & TypeScript Specialist',
     description:
       'Ingeniero Frontend Senior con más de 8 años de experiencia en React y JavaScript (TypeScript desde 2022) y Next.js. Especializado en Fintech, Banca y desarrollo asistido por IA.',
-    url: 'https://portfolio-jcom.vercel.app/',
+    url: './',
     siteName: 'José Carlos Orozco – Portfolio',
     type: 'website',
     locale: 'es_CO',
@@ -62,11 +62,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://portfolio-jcom.vercel.app',
-    languages: {
-      'es-CO': 'https://portfolio-jcom.vercel.app',
-      'en-US': 'https://portfolio-jcom.vercel.app',
-    },
+    canonical: './',
   },
 };
 

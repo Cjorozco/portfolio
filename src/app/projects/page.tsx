@@ -3,8 +3,8 @@ import { PROJECTS_CONFIG } from '../projects.config';
 
 export async function generateMetadata(): Promise<Metadata> {
     return {
-        title: 'Projects',
-        description: 'Selected projects fetched server-side from GitHub using Next.js ISR'
+        title: 'Proyectos',
+        description: 'Proyectos seleccionados de José Carlos Orozco, obtenidos desde GitHub con Next.js (ISR).'
     };
 }
 

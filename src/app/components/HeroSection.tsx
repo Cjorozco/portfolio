@@ -20,7 +20,7 @@ const HeroSection = () => {
 
           <div className="flex flex-wrap gap-4">
             <Link href="#projects" passHref>
-              <button className="px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-medium rounded-md transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20">
+              <button className="px-6 py-3 bg-orange-700 hover:bg-orange-800 text-white font-medium rounded-md transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg shadow-orange-500/20">
                 Ver Proyectos
               </button>
             </Link>

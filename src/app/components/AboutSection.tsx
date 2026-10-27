@@ -283,7 +283,7 @@ const AboutSection = () => {
                 onClick={() => setLanguage('es')}
                 className={`px-4 py-2 text-sm font-medium rounded-l-lg border transition-colors ${
                   language === 'es'
-                    ? 'bg-orange-500 text-white border-orange-500 shadow'
+                    ? 'bg-orange-700 text-white border-orange-700 shadow'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
               >
@@ -294,7 +294,7 @@ const AboutSection = () => {
                 onClick={() => setLanguage('en')}
                 className={`px-4 py-2 text-sm font-medium rounded-r-lg border transition-colors ${
                   language === 'en'
-                    ? 'bg-orange-500 text-white border-orange-500 shadow'
+                    ? 'bg-orange-700 text-white border-orange-700 shadow'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
               >

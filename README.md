@@ -28,8 +28,15 @@ Portafolio profesional construido con **Next.js 16 (App Router)** para demostrar
 - `robots.ts` dinámico con directivas para crawlers
 - `sitemap.ts` dinámico con las rutas del sitio
 - **JSON-LD** (Schema.org `Person`) para datos estructurados
-- `hreflang` alternates (`es-CO`, `en-US`) y URL canónica
+- URL canónica por página (`alternates.canonical: './'`) e imagen Open Graph generada (`opengraph-image.tsx`)
 - Optimización de imágenes con `next/image` (API moderna con `fill`, `sizes`, `priority`)
+
+### Seguridad
+- Cabeceras en `next.config.ts`: CSP, `nosniff`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`; `X-Powered-By` desactivado
+- CI (`.github/workflows/ci.yml`): typecheck, lint, build y `npm audit --omit=dev`
+
+### Proyectos
+- `src/app/projects.config.ts` controla orden, títulos, stack y demos de cada repo de GitHub
 
 ### Accesibilidad
 - HTML semántico (`<main>`, `<section>`, `<nav>`, `<footer>`)
@@ -62,6 +69,8 @@ src/app/
 npm install
 npm run dev
 ```
+
+Verificación: `npm run typecheck && npm run lint && npm run build`.
 
 El servidor se inicia en `http://localhost:3000` con Turbopack.
 

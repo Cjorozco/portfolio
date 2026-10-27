@@ -135,7 +135,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               href={project.demoUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors duration-300"
+              className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-orange-700 rounded-md hover:bg-orange-800 transition-colors duration-300"
             >
               <T text={{ es: 'Ver demo', en: 'Live demo' }} />
             </a>
@@ -147,7 +147,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             className={
               project.demoUrl
                 ? 'inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-orange-600 dark:text-orange-400 border border-orange-500 rounded-md hover:bg-orange-50 dark:hover:bg-gray-700 transition-colors duration-300'
-                : 'inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-md hover:bg-orange-600 transition-colors duration-300'
+                : 'inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-orange-700 rounded-md hover:bg-orange-800 transition-colors duration-300'
             }
           >
             <T text={{ es: 'Ver en GitHub', en: 'View on GitHub' }} />
@@ -186,7 +186,7 @@ const ProjectsSection = async ({ id }: { id: string }) => {
               <span className="text-xs font-bold uppercase tracking-wider text-orange-600 dark:text-orange-400 bg-orange-100 dark:bg-orange-950/60 px-2.5 py-0.5 rounded-full border border-orange-200 dark:border-orange-800">
                 <T text={{ es: "Plataforma Empresarial Destacada", en: "Featured Enterprise Platform" }} />
               </span>
-              <span className="text-xs font-mono text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded">
+              <span className="text-xs font-mono text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 px-2 py-0.5 rounded">
                 <T text={{ es: "🔒 Repositorio Privado", en: "🔒 Private Repository" }} />
               </span>
               <span className="text-xs text-emerald-600 dark:text-emerald-400 font-semibold">
@@ -202,7 +202,7 @@ const ProjectsSection = async ({ id }: { id: string }) => {
           </div>
           <a
             href="#about"
-            className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-orange-500 hover:bg-orange-600 rounded-md transition-all duration-300 shadow hover:scale-105 active:scale-95"
+            className="shrink-0 inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold text-white bg-orange-700 hover:bg-orange-800 rounded-md transition-all duration-300 shadow hover:scale-105 active:scale-95"
           >
             <T text={{ es: "Ver en Experiencia →", en: "View in Experience →" }} />
           </a>
