@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="min-h-screen flex flex-col justify-center bg-black text-white px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="animate-fade-in-down">
+        <div>
           <p className="text-orange-500 font-medium mb-2">Hola, mi nombre es</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
             José Carlos Orozco Medina

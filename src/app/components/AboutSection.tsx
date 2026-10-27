@@ -56,7 +56,9 @@ const AboutSection = () => {
 
   // Share the selected language with server-rendered sections (see .i18n-* in globals.css).
   useEffect(() => {
-    document.documentElement.dataset.lang = language;
+    // Default language needs no attribute: avoids a document-wide style invalidation on hydration.
+    if (language === 'en') document.documentElement.dataset.lang = 'en';
+    else delete document.documentElement.dataset.lang;
   }, [language]);
 
   const content: { es: ContentSection; en: ContentSection } = {
