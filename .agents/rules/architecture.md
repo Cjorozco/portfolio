@@ -24,14 +24,17 @@
 Este portafolio es la **vitrina pública principal** del perfil como **Ingeniero Frontend Senior**:
 
 1. **Alineación con Hoja de Vida y Logros Reales**:
-   - Todo rol, métrica, proyecto o habilidad listada en el sitio debe reflejar fidedignamente la trayectoria profesional (Banca, FinTech, Ecosistemas y Medio Ambiente, arquitecturas de alto tráfico).
-   - Proyectos de empresa privada con repositorios cerrados (como `ecosistemas-platform`) deben destacarse con su contexto arquitectónico y etiqueta explícita de repositorio empresarial privado.
+   - Todo rol, métrica, proyecto o habilidad listada en el sitio debe reflejar fidedignamente la trayectoria profesional (Banca, FinTech, plataformas operativas, arquitecturas de alto tráfico).
+   - Proyectos de empresa privada con repositorios cerrados deben destacarse con su contexto arquitectónico y etiqueta explícita de repositorio empresarial privado. No mostrar nombres reales de clientes, cifras del negocio, direcciones ni slugs de repositorios privados.
 
-2. **Calidad de Código y Estructura Limpia**:
+2. **Separación Empleo / Orzix**:
+   - El portafolio es para reclutadores. Orzix (marca independiente para PYMEs, `https://orzixtech.com`) vive solo en `OrzixSection.tsx`, antes del footer, junto con sus redes (@orzix.tech). Sin teléfono y fuera del hero, del footer y del JSON-LD.
+
+3. **Calidad de Código y Estructura Limpia**:
    - Componentes modulares y desacoplados bajo `src/app/components/`.
    - Soporte multilingüe (ES / EN) en componentes de contenido biográfico (`AboutSection.tsx`).
    - Sin dependencias innecesarias ni sobre-ingeniería: código copy-paste ready y mantenible.
 
-3. **Performance y Core Web Vitals**:
+4. **Performance y Core Web Vitals**:
    - Optimización de imágenes con `next/image` (`sizes`, `priority` en above-the-fold).
    - Tipografía optimizada con `next/font/google` (Geist & Geist Mono con subsets latinos y variables CSS).

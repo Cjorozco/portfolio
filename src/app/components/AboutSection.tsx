@@ -9,7 +9,6 @@ interface Job {
   period: string;
   location: string;
   projects?: string;
-  projectRepo?: string;
   isPrivate?: boolean;
   statusBadge?: string;
   responsibilities: string[];
@@ -64,7 +63,7 @@ const AboutSection = () => {
   const content: { es: ContentSection; en: ContentSection } = {
     es: {
       title: "Sobre Mí",
-      role: "Ingeniero Frontend Senior | React & TypeScript Specialist",
+      role: "Senior Frontend Engineer · React, Next.js, TypeScript",
       summary: [
         "Ingeniero Frontend Senior con más de 8 años de experiencia construyendo aplicaciones web escalables y de alto rendimiento en React y JavaScript (TypeScript desde 2022), especializado en sectores críticos como Fintech y Banca.",
         "Experto en arquitectura modular, consumo e integración de APIs REST complejas, manejo de estado global y optimización de interfaces con alto volumen de datos.",
@@ -80,19 +79,18 @@ const AboutSection = () => {
       privateRepoLabel: "Repositorio Privado Empresarial",
       jobs: [
         {
-          title: "Consultor Tecnológico / Arquitecto de Software (Proyecto)",
-          company: "Ecosistemas y Medio Ambiente",
+          title: "Desarrollador Full Stack (Next.js + Convex) · de punta a punta, desde levantamiento de requisitos hasta producción",
+          company: "Cliente confidencial",
           period: "Julio 2026 – Presente",
           location: "Barranquilla, Colombia",
           projects: "Plataforma web de gestión operativa (clientes, rutas y recolecciones)",
-          projectRepo: "https://github.com/ecosistemas-tech/ecosistemas-platform",
           isPrivate: true,
           statusBadge: "En desarrollo activo (Nuevo módulo operativo)",
           responsibilities: [
             "Diseñé la arquitectura técnica y lideré el desarrollo end-to-end de una plataforma web de gestión operativa (clientes, rutas y recolecciones), logrando el despliegue exitoso a producción.",
             "Desarrollé el panel administrativo con React, Next.js y TypeScript, garantizando arquitectura modular, alto rendimiento e integración de APIs backend y base de datos.",
             "Colaboré con stakeholders para levantar requerimientos y traducir necesidades operativas en funcionalidades técnicas escalables.",
-            "Liderando actualmente la arquitectura y desarrollo de un nuevo módulo operativo cotizado y aprobado para la plataforma (desarrollado en el repositorio empresarial privado de la organización)."
+            "Liderando actualmente la arquitectura y desarrollo de un nuevo módulo operativo para la plataforma (desarrollado en el repositorio empresarial privado de la organización)."
           ]
         },
         {
@@ -162,7 +160,7 @@ const AboutSection = () => {
     },
     en: {
       title: "About Me",
-      role: "Senior Frontend Engineer | React & TypeScript Specialist",
+      role: "Senior Frontend Engineer · React, Next.js, TypeScript",
       summary: [
         "Senior Frontend Engineer with 8+ years of experience building scalable, high-performance web applications using React and JavaScript (TypeScript since 2022), specializing in Fintech and Banking sectors.",
         "Proven track record in designing modular frontend architectures, integrating complex REST APIs, and optimizing data-intensive user interfaces.",
@@ -179,18 +177,17 @@ const AboutSection = () => {
       jobs: [
         {
           title: "Technology Consultant / Software Architect (Project-based)",
-          company: "Ecosistemas y Medio Ambiente",
+          company: "Confidential client",
           period: "July 2026 – Present",
           location: "Barranquilla, Colombia",
           projects: "Operational management web platform (clients, routes, collections)",
-          projectRepo: "https://github.com/ecosistemas-tech/ecosistemas-platform",
           isPrivate: true,
           statusBadge: "Active Development (New operational module)",
           responsibilities: [
             "Architected and led the end-to-end development of an operational management web platform (clients, routes, collections), successfully delivering the solution to production.",
             "Built the admin dashboard using React, Next.js, and TypeScript, ensuring a modular architecture, high performance, and seamless backend API integration.",
             "Partnered with business stakeholders to translate operational needs into scalable technical specifications.",
-            "Currently leading the architecture and implementation of a new operational module approved for production (managed in the client's private enterprise repository)."
+            "Currently leading the architecture and implementation of a new operational module for the platform (managed in the client's private enterprise repository)."
           ]
         },
         {
@@ -410,9 +407,6 @@ const AboutSection = () => {
                         <div className="flex flex-wrap items-center gap-2 text-xs text-gray-500 dark:text-gray-400">
                           <span className="inline-flex items-center gap-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-0.5 rounded font-mono">
                             🔒 {currentContent.privateRepoLabel}
-                          </span>
-                          <span className="text-gray-400">
-                            (ecosistemas-tech/ecosistemas-platform)
                           </span>
                         </div>
                       )}
