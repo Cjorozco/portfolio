@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: '%s | José Carlos Orozco'
   },
   description:
-    'Ingeniero Frontend Senior con más de 8 años de experiencia en React y JavaScript (TypeScript desde 2022) y Next.js. Especializado en Fintech, Banca, plataformas operativas y desarrollo asistido por IA.',
+    'Senior Frontend Engineer con más de 8 años de experiencia en React y JavaScript (TypeScript desde 2022) y Next.js. Especializado en Fintech, Banca, plataformas operativas y desarrollo asistido por IA.',
   keywords: [
     'Ingeniero Frontend Senior',
     'Senior Frontend Engineer',
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'José Carlos Orozco – Senior Frontend Engineer · React, Next.js, TypeScript',
     description:
-      'Ingeniero Frontend Senior con más de 8 años de experiencia en React y JavaScript (TypeScript desde 2022) y Next.js. Especializado en Fintech, Banca y desarrollo asistido por IA.',
+      'Senior Frontend Engineer con más de 8 años de experiencia en React y JavaScript (TypeScript desde 2022) y Next.js. Especializado en Fintech, Banca y desarrollo asistido por IA.',
     url: './',
     siteName: 'José Carlos Orozco – Portfolio',
     type: 'website',
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'José Carlos Orozco – Senior Frontend Engineer · React, Next.js, TypeScript',
     description:
-      'Ingeniero Frontend Senior especializado en React, TypeScript, Next.js y desarrollo asistido por IA.',
+      'Senior Frontend Engineer con más de 8 años de experiencia en React y JavaScript (TypeScript desde 2022) y Next.js. Especializado en Fintech, Banca, plataformas operativas y desarrollo asistido por IA.',
   },
   robots: {
     index: true,

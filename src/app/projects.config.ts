@@ -53,4 +53,6 @@ export const PROJECTS_CONFIG: Record<string, ProjectConfig> = {
   },
   'basic-html-website': { hidden: true },
   'aws-s3-cloudfront-static-site': { hidden: true },
+  'skills-hello-github-actions': { hidden: true },
+  'Single-Page-CV': { hidden: true },
 };

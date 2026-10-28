@@ -149,7 +149,7 @@ const AboutSection = () => {
         {
           title: "Introducción a la Programación con Python",
           institution: "Universidad Católica de Oriente",
-          status: "Verificado"
+          status: "Certificado"
         }
       ],
       languages: [
@@ -245,7 +245,7 @@ const AboutSection = () => {
         {
           title: "Introduction to Programming with Python",
           institution: "Universidad Católica de Oriente",
-          status: "Verified"
+          status: "Certified"
         }
       ],
       languages: [
