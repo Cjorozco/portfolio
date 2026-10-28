@@ -25,7 +25,7 @@ Este portafolio es la **vitrina pública principal** del perfil como **Ingeniero
 
 1. **Alineación con Hoja de Vida y Logros Reales**:
    - Todo rol, métrica, proyecto o habilidad listada en el sitio debe reflejar fidedignamente la trayectoria profesional (Banca, FinTech, plataformas operativas, arquitecturas de alto tráfico).
-   - Proyectos de empresa privada con repositorios cerrados deben destacarse con su contexto arquitectónico y etiqueta explícita de repositorio empresarial privado. No mostrar nombres reales de clientes, cifras del negocio, direcciones ni slugs de repositorios privados.
+   - Proyectos de empresa privada con repositorios cerrados deben destacarse con su contexto arquitectónico y etiqueta explícita de repositorio empresarial privado. El nombre de Ecosistemas puede mostrarse (autorización del cliente); no mostrar otros nombres de clientes, repositorios privados, cifras del negocio, direcciones ni nombres de personas.
 
 2. **Separación Empleo / Orzix**:
    - El portafolio es para reclutadores. Orzix (marca independiente para PYMEs, `https://orzixtech.com`) vive solo en `OrzixSection.tsx`, antes del footer, junto con sus redes (@orzix.tech). Sin teléfono y fuera del hero, del footer y del JSON-LD.

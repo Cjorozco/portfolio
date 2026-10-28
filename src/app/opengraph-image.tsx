@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const alt = 'José Carlos Orozco – Ingeniero Frontend Senior';
+export const alt = 'José Carlos Orozco – Senior Frontend Engineer · React, Next.js, TypeScript';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
@@ -20,7 +20,7 @@ export default function OpenGraphImage() {
         }}
       >
         <div style={{ fontSize: 76, fontWeight: 700 }}>José Carlos Orozco</div>
-        <div style={{ fontSize: 40, marginTop: 24, color: '#fb923c' }}>Ingeniero Frontend Senior</div>
+        <div style={{ fontSize: 34, marginTop: 24, color: '#fb923c' }}>Senior Frontend Engineer · React, Next.js, TypeScript</div>
         <div style={{ fontSize: 30, marginTop: 24, color: '#9ca3af' }}>React · TypeScript · Next.js · Fintech</div>
       </div>
     ),

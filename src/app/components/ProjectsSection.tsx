@@ -194,7 +194,7 @@ const ProjectsSection = async ({ id }: { id: string }) => {
               </span>
             </div>
             <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-              <T text={{ es: "Gestión Operativa & Panel Administrativo", en: "Operations Management & Admin Panel" }} />
+              <T text={{ es: "Ecosistemas Platform — Gestión Operativa & Panel Administrativo", en: "Ecosistemas Platform — Operations Management & Admin Panel" }} />
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 mt-1 max-w-2xl leading-relaxed">
               <T text={{ es: "Arquitectura end-to-end con Next.js, React y TypeScript para gestión de clientes, rutas y recolecciones en producción. Actualmente desarrollando un nuevo módulo operativo para la plataforma empresarial.", en: "End-to-end architecture with Next.js, React and TypeScript for managing customers, routes and collections in production. Currently building a new operations module for the enterprise platform." }} />

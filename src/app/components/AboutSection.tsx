@@ -80,7 +80,7 @@ const AboutSection = () => {
       jobs: [
         {
           title: "Desarrollador Full Stack (Next.js + Convex) · de punta a punta, desde levantamiento de requisitos hasta producción",
-          company: "Cliente confidencial",
+          company: "Ecosistemas y Medio Ambiente",
           period: "Julio 2026 – Presente",
           location: "Barranquilla, Colombia",
           projects: "Plataforma web de gestión operativa (clientes, rutas y recolecciones)",
@@ -134,7 +134,7 @@ const AboutSection = () => {
           title: "Cypress: Web Automation Testing from Zero to Hero",
           institution: "Udemy (2026)",
           status: "Verificado",
-          link: "https://bit.ly/4dwx6ns"
+          link: "https://www.udemy.com/certificate/UC-4b07ce63-3b34-483a-ab8e-a3da4410b525/"
         },
         {
           title: "Inteligencia de Negocios con Power BI",
@@ -149,8 +149,7 @@ const AboutSection = () => {
         {
           title: "Introducción a la Programación con Python",
           institution: "Universidad Católica de Oriente",
-          status: "Verificado",
-          link: "https://bit.ly/4alovCi"
+          status: "Verificado"
         }
       ],
       languages: [
@@ -176,8 +175,8 @@ const AboutSection = () => {
       privateRepoLabel: "Enterprise Private Repository",
       jobs: [
         {
-          title: "Technology Consultant / Software Architect (Project-based)",
-          company: "Confidential client",
+          title: "Full Stack Developer (Next.js + Convex) · end to end, from requirements gathering to production",
+          company: "Ecosistemas y Medio Ambiente",
           period: "July 2026 – Present",
           location: "Barranquilla, Colombia",
           projects: "Operational management web platform (clients, routes, collections)",
@@ -231,7 +230,7 @@ const AboutSection = () => {
           title: "Cypress: Web Automation Testing from Zero to Hero",
           institution: "Udemy (2026)",
           status: "Verified",
-          link: "https://bit.ly/4dwx6ns"
+          link: "https://www.udemy.com/certificate/UC-4b07ce63-3b34-483a-ab8e-a3da4410b525/"
         },
         {
           title: "Business Intelligence with Power BI",
@@ -246,8 +245,7 @@ const AboutSection = () => {
         {
           title: "Introduction to Programming with Python",
           institution: "Universidad Católica de Oriente",
-          status: "Verified",
-          link: "https://bit.ly/4alovCi"
+          status: "Verified"
         }
       ],
       languages: [
