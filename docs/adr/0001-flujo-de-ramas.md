@@ -17,3 +17,9 @@ Adoptar el flujo descrito en `.agents/rules/architecture.md` (sección «Flujo d
 - El CI corre en PR y push para ambas ramas.
 - Requiere ajustes en el host (protección de ramas en GitHub, rama de producción en Vercel), aplicados por el responsable.
 - No hay ADR previos que enmendar.
+
+
+## Enmiendas
+
+### 2026-10-30 — Sin protección de rama en el host
+La protección de rama del host no se activará porque requiere plan de pago. El flujo se sostiene por convención: las reglas de los agentes, «push o merge solo cuando se pida», sin push forzado y el flujo de dos PR (squash a `develop`, merge commit de `develop` a `master`). Esta enmienda sustituye la línea de Consecuencias que daba por pendiente la protección de ramas en GitHub; el ajuste de la rama de producción en Vercel (`master`) sigue vigente y ya está confirmado.

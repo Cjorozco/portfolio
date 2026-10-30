@@ -9,6 +9,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 - `docs/HANDOFF.md` con el estado de traspaso.
 
 ### Cambiado
+- Documentación: el flujo de ramas se sostiene por convención, sin protección de rama en el host (enmienda en ADR 0001).
 - CI: corre en push a `master` y `develop`, y en PR hacia ambas.
 - `develop` alineada con `master` (fast-forward).
 
