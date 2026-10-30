@@ -16,6 +16,10 @@ Portafolio profesional construido con **Next.js 16 (App Router)** para demostrar
 | Tipografía | Geist & Geist Mono (via `next/font`) |
 | Deploy | Vercel |
 
+## Flujo de trabajo y despliegue
+
+`master` es producción y `develop` es integración (preview en Vercel); los cambios llegan por PR a `develop` y se publican con PR `develop` → `master`. Detalle en [`.agents/rules/architecture.md`](.agents/rules/architecture.md) y [ADR 0001](docs/adr/0001-flujo-de-ramas.md).
+
 ## Características Técnicas
 
 ### Server Components & ISR
