@@ -38,3 +38,20 @@ Este portafolio es la **vitrina pública principal** del perfil como **Ingeniero
 4. **Performance y Core Web Vitals**:
    - Optimización de imágenes con `next/image` (`sizes`, `priority` en above-the-fold).
    - Tipografía optimizada con `next/font/google` (Geist & Geist Mono con subsets latinos y variables CSS).
+
+---
+
+## Flujo de ramas y despliegue (fuente única de verdad)
+
+> Otros archivos (`AGENTS.md`, `README.md`, ADR 0001) solo referencian esta sección. Si algo cambia, se cambia aquí.
+
+- `master` es **producción**; `develop` es **integración** (preview). Ningún cambio llega a `master` sin pasar antes por `develop`.
+- Cada cambio sale en una **rama nueva desde `develop`** y vuelve a `develop` con **PR y squash merge**.
+- Antes de ramificar: `git fetch origin develop` (otras sesiones también publican).
+- **Publicar:** PR `develop` → `master` con **merge commit** (no squash, para que `develop` no diverja de `master`). Que `master` tenga de más el commit de merge de cada publicación es normal y no se sincroniza de vuelta.
+- **Hotfix urgente:** rama desde `master`, PR a `master`, y se devuelve a `develop` el mismo día (PR `master` → `develop`). Es el único caso en que `master` vuelve a `develop`.
+- Nada de push forzado. Push o merge solo cuando el responsable lo pida.
+- **Conventional Commits:** tipo en inglés y descripción en español (ej. `feat: agrega sección de precios`).
+- **CI** (`.github/workflows/ci.yml`): corre en PR hacia `develop` y `master`, y en push a ambas.
+- **Despliegue (Vercel):** `master` = Production; `develop` y ramas de feature = Preview.
+- Versión SemVer en `package.json` y entrada en `CHANGELOG.md` al publicar cambios significativos (ver `AGENTS.md`).

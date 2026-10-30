@@ -89,6 +89,12 @@ CODE GENERATION RULES
    - If the app exposes version in UI (Settings/manifest), keep it in sync with `package.json`.
 
 ═══════════════════════════════════════════════
+GIT WORKFLOW
+═══════════════════════════════════════════════
+
+Flujo de ramas (`develop` → `master`), commits y despliegue: ver `.agents/rules/architecture.md` (sección «Flujo de ramas y despliegue») y `docs/adr/0001-flujo-de-ramas.md`. Registrar cambios en `CHANGELOG.md` y estado en `docs/HANDOFF.md`.
+
+═══════════════════════════════════════════════
 PWA & OFFLINE-FIRST RULES
 ═══════════════════════════════════════════════
 
