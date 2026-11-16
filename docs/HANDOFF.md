@@ -1,6 +1,6 @@
 # Handoff
 
-**Última actualización:** 2026-10-30 · **Versión app:** 0.5.2
+**Última actualización:** 2026-11-16 · **Versión app:** 0.5.3
 
 ## Flujo de trabajo
 Ver «Flujo de ramas y despliegue» en `.agents/rules/architecture.md` y `docs/adr/0001-flujo-de-ramas.md`.
