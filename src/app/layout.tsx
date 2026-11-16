@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,6 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
   preload: false,
 });
+
+// Emits <meta name="color-scheme"> so the canvas is themed before CSS loads
+export const viewport: Viewport = {
+  colorScheme: "light dark",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio-jcom.vercel.app'),

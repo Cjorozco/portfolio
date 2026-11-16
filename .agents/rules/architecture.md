@@ -51,6 +51,7 @@ Este portafolio es la **vitrina pública principal** del perfil como **Ingeniero
 - **Publicar:** PR `develop` → `master` con **merge commit** (no squash, para que `develop` no diverja de `master`). Que `master` tenga de más el commit de merge de cada publicación es normal y no se sincroniza de vuelta.
 - **Hotfix urgente:** rama desde `master`, PR a `master`, y se devuelve a `develop` el mismo día (PR `master` → `develop`). Es el único caso en que `master` vuelve a `develop`.
 - Nada de push forzado. Push o merge solo cuando el responsable lo pida.
+- **Sin protección de rama en el host** (requiere plan de pago): el flujo se sostiene por convención, no por bloqueo técnico. Ver enmienda en ADR 0001.
 - **Conventional Commits:** tipo en inglés y descripción en español (ej. `feat: agrega sección de precios`).
 - **CI** (`.github/workflows/ci.yml`): corre en PR hacia `develop` y `master`, y en push a ambas.
 - **Despliegue (Vercel):** `master` = Production; `develop` y ramas de feature = Preview.

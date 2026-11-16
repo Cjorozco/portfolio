@@ -1,14 +1,14 @@
 # Handoff
 
-**Última actualización:** 2026-10-30 · **Versión app:** 0.5.2
+**Última actualización:** 2026-11-16 · **Versión app:** 0.5.3
 
 ## Flujo de trabajo
 Ver «Flujo de ramas y despliegue» en `.agents/rules/architecture.md` y `docs/adr/0001-flujo-de-ramas.md`.
 
 ## Estado
 - `develop` alineada con `master` (fast-forward el 2026-10-30).
-- Rama `docs/flujo-de-ramas` con la documentación del flujo y el ajuste de CI; pendiente de PR a `develop`.
+- Flujo de ramas y ajuste de CI publicados en `master` (PR #8 a `develop` y PR #9 a `master`).
 
-## Pendiente en el host (lo aplica el responsable)
+## Host (lo gestiona el responsable)
 - Vercel: confirmar *Production Branch* = `master`; `develop` queda como Preview.
-- GitHub: proteger `master` y `develop` (PR obligatorio, check `verify`, sin push forzado); habilitar squash y merge commit; borrar ramas al hacer merge.
+- GitHub: **sin protección de rama a propósito (plan de pago)**. El flujo se sostiene por convención (ver enmienda en ADR 0001). Squash y merge commit habilitados según el flujo; las ramas se borran manualmente, con confirmación del responsable.
