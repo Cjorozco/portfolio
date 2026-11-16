@@ -3,16 +3,32 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background-light: #ffffff;
+  --background-dark: #0a0a0a;
+  --foreground-light: #171717;
+  --foreground-dark: #ededed;
+
+  /* Fallback for browsers without light-dark() */
+  --background: var(--background-light);
+  --foreground: var(--foreground-light);
   --primary: #f97316;
   /* orange-500 */
+
+  /* Native UI (scrollbars, form controls, canvas) follows the system preference */
+  color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--background-dark);
+    --foreground: var(--foreground-dark);
+  }
+}
+
+@supports (color: light-dark(white, black)) {
+  :root {
+    --background: light-dark(var(--background-light), var(--background-dark));
+    --foreground: light-dark(var(--foreground-light), var(--foreground-dark));
   }
 }
 
