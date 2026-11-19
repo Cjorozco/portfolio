@@ -5,6 +5,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 ## [Sin publicar]
 
 ### Agregado
+- Hero: franja estática «Demos en vivo» bajo los botones, con enlaces a los proyectos fijados que tienen `demoUrl` en `projects.config.ts` (hoy Project Manager y Budget PWA). Se renderiza en el servidor, sin JavaScript nuevo ni movimiento. Versión `0.6.0`.
 - Flujo de ramas `develop` → `master` documentado en `.agents/rules/architecture.md` y registrado en `docs/adr/0001-flujo-de-ramas.md`.
 - `docs/HANDOFF.md` con el estado de traspaso.
 

@@ -1,5 +1,18 @@
 import React from "react";
 import Link from "next/link";
+import { PROJECTS_CONFIG } from "../projects.config";
+
+const MAX_HERO_DEMOS = 3;
+
+// Static, server-rendered: pinned projects that have a public demo, in pinned order.
+const liveDemos = Object.entries(PROJECTS_CONFIG)
+  .filter(([, config]) => !config.hidden && config.demoUrl && config.order !== undefined)
+  .sort(([, a], [, b]) => (a.order ?? 0) - (b.order ?? 0))
+  .slice(0, MAX_HERO_DEMOS)
+  .map(([name, config]) => ({
+    title: config.title ?? name.replace(/-/g, " "),
+    url: config.demoUrl as string,
+  }));
 
 const HeroSection = () => {
   return (
@@ -30,6 +43,31 @@ const HeroSection = () => {
               </button>
             </Link>
           </div>
+
+          {liveDemos.length > 0 && (
+            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+              <p id="hero-demos" className="text-gray-400">
+                Demos en vivo:
+              </p>
+              <ul aria-labelledby="hero-demos" className="flex flex-wrap gap-x-4">
+                {liveDemos.map((demo) => (
+                  <li key={demo.url}>
+                    <a
+                      href={demo.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-11 items-center gap-1 font-medium text-gray-200 underline decoration-orange-500/60 underline-offset-4 transition-colors hover:text-orange-400 hover:decoration-orange-400"
+                    >
+                      {demo.title}
+                      {/* U+FE0E forces text presentation; Windows otherwise renders an emoji. */}
+                      <span aria-hidden="true">{"↗︎"}</span>
+                      <span className="sr-only">(abre en una pestaña nueva)</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <div
