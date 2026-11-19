@@ -4,6 +4,14 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 
 ## [Sin publicar]
 
+## [0.7.2] - 2026-11-18
+
+### Corregido
+- Sobre mí, en móvil: las tarjetas de Educación, Certificaciones e Idiomas se montaban sobre el título del bloque siguiente. Usaban `h-full` dentro de una columna que también contiene el título, así que se salían 44 px. Ahora la columna es flex vertical y la tarjeta usa `flex-1`; en escritorio siguen con la misma altura. La flecha de «Verificado» ya no se muestra como emoji (#18).
+
+### Seguridad
+- Next.js `16.4.3` → `16.4.6` (y `eslint-config-next`). Cierra el aviso moderado de `npm audit` sobre fugas de caché en funciones `'use cache'` (el sitio no las usa). `npm audit --omit=dev` queda en 0. Incluye la `0.7.1`, que no se publicó por separado (#17).
+
 ## [0.7.0] - 2026-11-18
 
 ### Agregado

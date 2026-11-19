@@ -421,14 +421,14 @@ const AboutSection = () => {
             </div>
           </div>
 
-          {/* Educación, Certificaciones e Idiomas */}
+          {/* Educación, Certificaciones e Idiomas: card uses flex-1, not h-full, so the heading above never pushes it out of its column. */}
           <div className="mt-16 grid md:grid-cols-3 gap-6">
             {/* Educación */}
-            <div>
+            <div className="flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center md:text-left">
                 {currentContent.education}
               </h3>
-              <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 h-full flex flex-col justify-between">
+              <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 flex-1 flex flex-col justify-between">
                 <div className="space-y-4">
                   {currentContent.degrees.map((degree, index) => (
                     <div key={index}>
@@ -448,11 +448,11 @@ const AboutSection = () => {
             </div>
 
             {/* Certificaciones */}
-            <div>
+            <div className="flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center md:text-left">
                 {currentContent.certificationsTitle}
               </h3>
-              <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 h-full">
+              <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 flex-1">
                 <div className="space-y-3.5">
                   {currentContent.certifications.map((cert, index) => (
                     <div key={index}>
@@ -469,7 +469,7 @@ const AboutSection = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 text-orange-500 hover:text-orange-600 text-xs font-medium mt-0.5 transition-colors"
                         >
-                          {cert.status} ↗
+                          {cert.status} <span aria-hidden="true">{"↗︎"}</span>
                         </a>
                       ) : (
                         <span className="inline-block text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/40 px-1.5 py-0.5 rounded text-[11px] font-medium border border-emerald-200 dark:border-emerald-800 mt-0.5">
@@ -483,11 +483,11 @@ const AboutSection = () => {
             </div>
 
             {/* Idiomas */}
-            <div>
+            <div className="flex flex-col">
               <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center md:text-left">
                 {currentContent.languagesTitle}
               </h3>
-              <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 h-full">
+              <div className="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 flex-1">
                 <div className="space-y-4">
                   {currentContent.languages.map((lang, index) => (
                     <div key={index} className="flex justify-between items-center py-1 border-b border-gray-100 dark:border-gray-700 last:border-b-0">
