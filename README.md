@@ -14,6 +14,7 @@ Portafolio profesional construido con **Next.js 16 (App Router)** para demostrar
 | Lenguaje | TypeScript |
 | UI | React 19, Tailwind CSS |
 | Tipografía | Geist & Geist Mono (via `next/font`) |
+| 3D (solo `/lab`) | Three.js, cargado con `next/dynamic` sin SSR |
 | Deploy | Vercel |
 
 ## Flujo de trabajo y despliegue
@@ -42,6 +43,12 @@ Portafolio profesional construido con **Next.js 16 (App Router)** para demostrar
 ### Proyectos
 - `src/app/projects.config.ts` controla orden, títulos, stack y demos de cada repo de GitHub
 
+### Laboratorio 3D (`/lab`)
+- Escena interactiva en Three.js puro (sin React Three Fiber ni modelos externos): conducir un carro y empujar cajas a una meta, con teclado o arrastre.
+- El chunk de Three.js (~134 KB gzip) solo se descarga en `/lab`; el resto de rutas no cambia.
+- Renderiza solo si la escena está en pantalla y la pestaña visible; libera la GPU al desmontar.
+- Con `prefers-reduced-motion: reduce` o sin WebGL muestra una ilustración SVG estática y no descarga Three.js.
+
 ### Accesibilidad
 - HTML semántico (`<main>`, `<section>`, `<nav>`, `<footer>`)
 - `aria-label` en enlaces de redes sociales
@@ -58,6 +65,11 @@ src/app/
 │   ├── ProjectsSection.tsx  # Repos de GitHub vía ISR
 │   ├── SkillsSection.tsx    # Skills agrupadas por categoría
 │   └── Footer.tsx           # Navegación, contacto y copyright
+├── lab/
+│   ├── page.tsx             # Laboratorio 3D (server)
+│   ├── LabStage.tsx         # Elige escena o fallback (movimiento reducido / WebGL)
+│   ├── LabScene.tsx         # Escena Three.js, carga diferida
+│   └── LabFallback.tsx      # Ilustración estática equivalente
 ├── projects/
 │   └── page.tsx             # Página de proyectos con generateMetadata
 ├── layout.tsx               # Layout root con metadatos y JSON-LD

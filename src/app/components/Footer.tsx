@@ -5,6 +5,7 @@ const navigation = [
   { name: 'Sobre Mí', href: '#about' },
   { name: 'Proyectos', href: '#projects' },
   { name: 'Habilidades', href: '#skills' },
+  { name: 'Laboratorio 3D', href: '/lab' },
 ];
 
 const social = [
