@@ -5,6 +5,7 @@
 - **Next.js 16 (App Router, Turbopack)**
 - **React 19 + TypeScript** (con foco estricto en type-safety y Server Components por defecto)
 - **Tailwind CSS** para maquetación responsive, mobile-first y soporte de dark mode
+- **Three.js** solo en `/lab` (laboratorio 3D): importado con `next/dynamic` y `ssr: false`, nunca desde la página principal. Fallback estático con movimiento reducido o sin WebGL.
 - **Estrategia de Data Fetching**:
   - Server Components para minimizar JavaScript enviado al cliente.
   - **ISR (Incremental Static Regeneration)** (`next: { revalidate: 3600 }`) para consumo de la API pública de GitHub.

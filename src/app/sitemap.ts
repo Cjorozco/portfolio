@@ -16,5 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/lab`,
+      lastModified: new Date('2026-11-18'),
+      changeFrequency: 'monthly',
+      priority: 0.3,
+    },
   ];
 }

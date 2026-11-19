@@ -5,6 +5,7 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 ## [Sin publicar]
 
 ### Agregado
+- Laboratorio 3D en `/lab`: escena interactiva con Three.js (carro y cajas que se empujan a una meta) con teclado o arrastre. Three.js se carga solo en esa ruta con `next/dynamic` sin SSR (~134 KB gzip). Con movimiento reducido o sin WebGL se muestra una ilustración estática. Enlace discreto en el footer y entrada en el sitemap. Dependencia nueva: `three`. Versión `0.7.0`.
 - Hero: franja estática «Demos en vivo» bajo los botones, con enlaces a los proyectos fijados que tienen `demoUrl` en `projects.config.ts` (hoy Project Manager y Budget PWA). Se renderiza en el servidor, sin JavaScript nuevo ni movimiento. Versión `0.6.0`.
 - Flujo de ramas `develop` → `master` documentado en `.agents/rules/architecture.md` y registrado en `docs/adr/0001-flujo-de-ramas.md`.
 - `docs/HANDOFF.md` con el estado de traspaso.
