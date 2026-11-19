@@ -4,6 +4,9 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y 
 
 ## [Sin publicar]
 
+### Seguridad
+- Next.js `16.4.3` → `16.4.6` (y `eslint-config-next`). Cierra el aviso moderado de `npm audit` sobre fugas de caché en funciones `'use cache'` (el sitio no las usa). `npm audit --omit=dev` queda en 0. Versión `0.7.1`.
+
 ## [0.7.0] - 2026-11-18
 
 ### Agregado
