@@ -53,7 +53,7 @@ Portafolio profesional construido con **Next.js 16 (App Router)** para demostrar
 ```
 src/app/
 ├── components/
-│   ├── HeroSection.tsx      # Sección principal con CTA y redes
+│   ├── HeroSection.tsx      # Sección principal con CTA, demos en vivo y redes
 │   ├── AboutSection.tsx     # Sobre mí con toggle ES/EN
 │   ├── ProjectsSection.tsx  # Repos de GitHub vía ISR
 │   ├── SkillsSection.tsx    # Skills agrupadas por categoría
