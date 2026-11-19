@@ -6,10 +6,9 @@
 Ver «Flujo de ramas y despliegue» en `.agents/rules/architecture.md` y `docs/adr/0001-flujo-de-ramas.md`.
 
 ## Estado
-- `develop` alineada con `master` (fast-forward el 2026-10-30).
-- Flujo de ramas y ajuste de CI publicados en `master` (PR #8 a `develop` y PR #9 a `master`).
-- `feat/hero-demos` (0.6.0, sin publicar): franja estática «Demos en vivo» en el Hero. Se descartó portar el Hero vivo de Orzix (ADR 0008) porque el Hero del portfolio no tiene fichas. PR #13 abierto hacia `develop`.
-- `feat/lab-threejs` (0.7.0, sin publicar, sale de `feat/hero-demos`): ruta `/lab` con escena Three.js y fallback; enlace en el footer. Merge después de #13.
+- `0.7.0` en `develop`: franja «Demos en vivo» en el Hero (#13) y laboratorio 3D en `/lab` con Three.js y fallback estático (#14). Se descartó portar el Hero vivo de Orzix (ADR 0008 de `orzix-landing`) porque el Hero del portfolio no tiene fichas.
+- Publicación de `0.7.0` a `master`: PR `develop` → `master` con merge commit, pendiente de aprobación del responsable.
+- Pendiente aparte: actualizar Next.js (`npm audit` marca un aviso moderado en `next` 16.2–16.4.4).
 
 ## Host (lo gestiona el responsable)
 - Vercel: confirmar *Production Branch* = `master`; `develop` queda como Preview.
